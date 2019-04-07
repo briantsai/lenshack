@@ -1,0 +1,751 @@
+<!--
+  Copyright 2019 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+  <meta charSet="utf-8">
+  <title>Unlock - 01-countdown</title>
+  <link rel="canonical" href="https://lens-templates.firebaseapp.com/template-countdown.html">
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html{
+  line-height:1.15;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%; }
+body{
+  margin:0; }
+article,aside,footer,header,nav,section{
+  display:block; }
+h1{
+  font-size:2em;
+  margin:.67em 0; }
+figcaption,figure,main{
+  display:block; }
+figure{
+  margin:1em 40px; }
+hr{
+  box-sizing:content-box;
+  height:0;
+  overflow:visible; }
+pre{
+  font-family:monospace,monospace;
+  font-size:1em; }
+a{
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects; }
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline dotted; }
+b,strong{
+  font-weight:bolder; }
+code,kbd,samp{
+  font-family:monospace,monospace;
+  font-size:1em; }
+dfn{
+  font-style:italic; }
+mark{
+  background-color:#ff0;
+  color:#000; }
+small{
+  font-size:80%; }
+sub,sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline; }
+
+sub{
+  bottom:-.25em; }
+
+sup{
+  top:-.5em; }
+audio,video{
+  display:inline-block; }
+audio:not([controls]){
+  display:none;
+  height:0; }
+img{
+  border-style:none; }
+svg:not(:root){
+  overflow:hidden; }
+button,input,optgroup,select,textarea{
+  font-family:sans-serif;
+  font-size:100%;
+  line-height:1.15;
+  margin:0; }
+button,input{
+  overflow:visible; }
+button,select{
+  text-transform:none; }
+[type=reset],[type=submit],button,html [type=button]{
+  -webkit-appearance:button; }
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
+  border-style:none;
+  padding:0; }
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
+  outline:1px dotted ButtonText; }
+fieldset{
+  padding:.35em .75em .625em; }
+legend{
+  box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal; }
+progress{
+  display:inline-block;
+  vertical-align:baseline; }
+textarea{
+  overflow:auto; }
+[type=checkbox],[type=radio]{
+  box-sizing:border-box;
+  padding:0; }
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+  height:auto; }
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px; }
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none; }
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit; }
+details,menu{
+  display:block; }
+summary{
+  display:list-item; }
+canvas{
+  display:inline-block; }
+[hidden],template{
+  display:none; }
+input[type=date],input[type=email],input[type=tel],input[type=text]{
+  height:3.6rem;
+  width:100%;
+  display:block;
+  border:1px solid #979797;
+  font:1.2rem / 3.6rem IBM Plex,serif;
+  padding:0 .8rem;
+  border-radius:0;
+  -webkit-appearance:none; }
+  input[type=date].placeholder,input[type=email].placeholder,input[type=tel].placeholder,input[type=text].placeholder{
+    color:rgba(32, 33, 36, .5); }
+  input[type=date]:-moz-placeholder,input[type=date]::-moz-placeholder,input[type=email]:-moz-placeholder,input[type=email]::-moz-placeholder,input[type=tel]:-moz-placeholder,input[type=tel]::-moz-placeholder,input[type=text]:-moz-placeholder,input[type=text]::-moz-placeholder{
+    color:rgba(32, 33, 36, .5); }
+  input[type=date]:-ms-input-placeholder,input[type=email]:-ms-input-placeholder,input[type=tel]:-ms-input-placeholder,input[type=text]:-ms-input-placeholder{
+    color:rgba(32, 33, 36, .5); }
+  input[type=date]::-webkit-input-placeholder,input[type=email]::-webkit-input-placeholder,input[type=tel]::-webkit-input-placeholder,input[type=text]::-webkit-input-placeholder{
+    color:rgba(32, 33, 36, .5); }
+
+select{
+  height:3.6rem;
+  width:100%;
+  display:inline-block;
+  border:1px solid #979797;
+  background:#fff;
+  color:#202124;
+  font:1.2rem / 3.6rem IBM Plex,serif;
+  padding:0 .8rem;
+  border-radius:0;
+  -webkit-appearance:none; }
+  select:invalid,select [disabled]{
+    color:rgba(32, 33, 36, .5); }
+
+input[type=checkbox]{
+  -webkit-appearance:none;
+  height:1.2rem;
+  width:1.2rem;
+  background:#fff;
+  position:relative;
+  border:1px solid #000;
+  display:inline-block; }
+  input[type=checkbox]:checked:before{
+    content:"";
+    display:block;
+    top:50%;
+    left:50%;
+    height:70%;
+    width:70%;
+    background:#000;
+    position:absolute;
+    -ms-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%); }
+
+.primary-button{
+  height:4rem;
+  font:700 1.6rem /4rem IBM Plex,serif;
+  text-transform:uppercase;
+  display:inline-block;
+  padding:0 .8rem;
+  background:#f2ba00;
+  text-decoration:none;
+  color:#fff;
+  text-align:center;
+  border:0;
+  border-radius:2.4rem; }
+  .primary-button[data-small]{
+    padding:0 2.4rem;
+    height:2.4rem;
+    line-height:2.4rem; }
+@font-face{
+  font-family:IBM Plex;
+  src:url(assets/template-countdown/assets/fonts/ibmplexsanscondensed-regular-webfont.4187c55.woff2) format("woff2"), url(assets/template-countdown/assets/fonts/ibmplexsanscondensed-regular-webfont.77777d2.woff) format("woff");
+  font-weight:400;
+  font-style:normal; }
+
+@font-face{
+  font-family:IBM Plex;
+  src:url(assets/template-countdown/assets/fonts/ibmplexsanscondensed-bold-webfont.990e2be.woff2) format("woff2"), url(assets/template-countdown/assets/fonts/ibmplexsanscondensed-bold-webfont.8c83849.woff) format("woff");
+  font-weight:700;
+  font-style:normal; }
+h1,h2,h3,p{
+  margin:0; }
+
+.heading-01{
+  font:3rem/1 IBM Plex,serif;
+  letter-spacing:-.5px; }
+  .heading-01 strong{
+    font-weight:700; }
+
+.heading-02{
+  font:2rem/1.2 IBM Plex,serif;
+  letter-spacing:-.5px; }
+  .heading-02 strong{
+    font-weight:700; }
+
+.heading-03{
+  font:1.5rem/1.4 IBM Plex,serif; }
+  .heading-03 strong{
+    font-weight:700; }
+
+.copy-01{
+  font:1.4rem/1.57 IBM Plex,serif; }
+
+.copy-02{
+  font:1.2rem/1.8 IBM Plex,serif; }
+
+.copy-03{
+  font:1.1rem/1 IBM Plex,serif; }
+
+.wrapper{
+  width:calc(100% - 3.2rem);
+  margin:0 auto;
+  box-sizing:border-box; }
+  .wrapper .break-out-wrapper{
+    width:calc(100% + 3.2rem);
+    margin-left:-1.6rem; }
+
+html{
+  font-size:10px;
+  box-sizing:border-box; }
+
+*,:after,:before{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  box-sizing:inherit; }
+
+body{
+  font-family:IBM Plex,serif;
+  color:#202124; }
+
+#app{
+  margin:0 auto;
+  max-width:45rem; }
+
+figure{
+  margin:0; }
+.carousel-hero{
+  position:relative; }
+  .carousel-hero .amp-carousel-button-next,.carousel-hero .amp-carousel-button-prev{
+    display:none; }
+  .carousel-hero .items{
+    min-height:430px; }
+    .carousel-hero .items .amp-carousel-slide .amp-img{
+      height:100%;
+      z-index:1; }
+    .carousel-hero .items .amp-carousel-slide img{
+      object-fit:cover; }
+  .carousel-hero .bullets{
+    width:100%;
+    position:absolute;
+    bottom:2rem;
+    left:0;
+    text-align:center; }
+    .carousel-hero .bullets button{
+      height:.8rem;
+      width:.8rem;
+      display:inline-block;
+      vertical-align:top;
+      margin:0 .4rem;
+      background:#fff;
+      border:none;
+      border-radius:50%;
+      font-size:0;
+      padding:0; }
+      .carousel-hero .bullets button[selected]{
+        background:#f2ba00;
+        outline:none; }
+  .carousel-hero .details{
+    position:absolute;
+    bottom:7rem;
+    left:50%;
+    -ms-transform:translateX(-50%);
+        transform:translateX(-50%);
+    z-index:3; }
+    .carousel-hero .details.is-countdown{
+      bottom:5rem; }
+  .carousel-hero .heading{
+    color:#fff; }
+  .carousel-hero .model-button{
+    height:4rem;
+    width:4rem;
+    position:absolute;
+    bottom:2rem;
+    right:2rem;
+    border:0;
+    padding:0;
+    z-index:3;
+    background-color:transparent;
+    outline:0; }
+  .carousel-hero .amp-3d-gltf-wrapper{
+    visibility:visible;
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%; }
+    .carousel-hero .amp-3d-gltf-wrapper.false{
+      visibility:hidden;
+      display:block; }
+    .carousel-hero .amp-3d-gltf-wrapper .amp-img{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%; }
+    .carousel-hero .amp-3d-gltf-wrapper .amp-3d-gltf{
+      position:absolute;
+      top:50%;
+      left:50%;
+      -ms-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%);
+      z-index:2;
+      width:325px;
+      height:300px; }
+.countdown{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-align:center;
+      align-items:center; }
+  .countdown,.countdown .part{
+  -ms-flex-pack:center;
+      justify-content:center; }
+  .countdown .part{
+    height:5rem;
+    width:6rem;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    -ms-flex-align:start;
+        align-items:flex-start;
+    -ms-flex-direction:column;
+        flex-direction:column;
+    -ms-flex-positive:0;
+        flex-grow:0;
+    -ms-flex-negative:0;
+        flex-shrink:0;
+    text-align:left; }
+    .countdown .part .value{
+      color:#f2ba00;
+      font-size:2.8rem; }
+    .countdown .part .label{
+      text-transform:uppercase;
+      color:#fff; }
+  .countdown .amp-date-countdown{
+    white-space:nowrap; }
+.product-title .wrapper{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:justify;
+      justify-content:space-between;
+  -ms-flex-align:end;
+      align-items:flex-end;
+  padding-top:2.4rem;
+  padding-bottom:2.4rem;
+  border-bottom:1px solid #d5dcda; }
+
+.product-title .price{
+  font:1.8rem/1 IBM Plex,serif;
+  margin-bottom:2px; }
+.product-description{
+  padding:3.2rem 0; }
+  .product-description .image{
+    margin:0 auto 2.4rem;
+    display:block; }
+  .product-description .heading{
+    margin-bottom:1.6rem; }
+.product-carousel{
+  padding:0 0 3.2rem; }
+  .product-carousel .heading{
+    margin-bottom:1.3rem; }
+  .product-carousel .carousel{
+    margin-left:auto;
+    width:calc(100% - 1.6rem); }
+  .product-carousel .slides{
+    white-space:nowrap;
+    display:inline-block;
+    margin:0;
+    padding:0 1.6rem;
+    font-size:0; }
+  .product-carousel .slide{
+    width:28rem;
+    display:inline-block;
+    vertical-align:top;
+    position:relative;
+    margin-right:1.6rem; }
+  .product-carousel .image{
+    width:100%; }
+  .product-carousel .description{
+    width:100%;
+    white-space:normal;
+    background:#e4e0d3;
+    padding:1.6rem 1.6rem 3.3rem;
+    border-bottom-left-radius:1.5rem;
+    border-bottom-right-radius:1.5rem;
+    box-sizing:border-box; }
+.notify{
+  text-align:center;
+  padding:0 0 6.4rem; }
+  .notify .notify-button{
+    height:auto;
+    width:calc(100% - 3.2rem);
+    bottom:2.4rem;
+    left:50%;
+    position:fixed;
+    max-width:45rem;
+    box-shadow:0 2px 8px 0 rgba(0, 0, 0, .25);
+    -ms-transform:translateX(-50%);
+        transform:translateX(-50%); }
+  .notify .lightbox{
+    background:rgba(21, 19, 19, .78);
+    width:100%;
+    height:100%;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+        align-items:center;
+    -ms-flex-pack:center;
+        justify-content:center;
+    z-index:4; }
+    .notify .lightbox .lightbox-content{
+      width:calc(100% - 6.4rem);
+      margin:0 auto;
+      padding:2.9rem 1.6rem 2.2rem;
+      border-radius:.8rem;
+      background:#e4e0d3;
+      position:relative;
+      max-width:40rem; }
+      .notify .lightbox .lightbox-content .introduction-copy{
+        margin-bottom:2.1rem; }
+      .notify .lightbox .lightbox-content strong{
+        color:#0699d8; }
+    .notify .lightbox form{
+      text-align:left; }
+    .notify .lightbox .close-button{
+      height:4rem;
+      width:4rem;
+      position:absolute;
+      top:-5rem;
+      right:0; }
+    .notify .lightbox .submit-button{
+      max-width:45rem;
+      width:calc(100% - 3.2rem);
+      position:fixed;
+      bottom:6.4rem;
+      left:50%;
+      -ms-transform:translate(-50%, 100%);
+          transform:translate(-50%, 100%); }
+
+  </style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+</head>
+<body>
+  <div id="app">
+    
+<!-- partial: component/layout/app/app.hbs -->
+<div data-component="app-root">
+    
+<!-- partial: component/block/markup/markup.hbs -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "ARImageTarget",
+      "name" : "ST Brooklyn X Phil Classic Collab",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-countdown/shoes.png"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "name": "ST Brooklyn X Phil Classic Collab",
+      "description": "The much anticipated collaboration between ST Brooklyn x Phil is here.",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-countdown/unlock_thumbnail.png",
+      "url": "https://lens-templates.firebaseapp.com/template-countdown.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ST Brooklyn & Phil",
+        "logo": "https://lens-templates.firebaseapp.com/assets/template-countdown/unlock_logo.png"
+      }
+    }
+  }
+</script>
+<!-- / component/block/markup/markup.hbs -->
+    
+<!-- partial: component/block/carousel-hero/carousel-hero.hbs -->
+<!--
+NOTES:
+- The transition speed is not something that can be changed in the amp-carousel.
+-->
+<section class="carousel-hero">
+  <amp-carousel controls
+    class="items"
+    type="slides"
+    width="412"
+    height="430"
+    layout="responsive"
+    [slide]="selectedSlide"
+    on="slideChange:AMP.setState({selectedSlide: event.index, showModel: false})" >
+      <div>
+        <div class="amp-3d-gltf-wrapper" [class]="showModel + ' amp-3d-gltf-wrapper'" >
+          <amp-3d-gltf
+            class="amp-3d-gltf"
+            layout="responsive"
+            alpha="true"
+            width="300"
+            height="300"
+            src="assets/template-countdown/carousel-hero/white2.gltf"
+            autoRotate="true"
+          ></amp-3d-gltf>
+          <amp-img class="amp-img" src="assets/template-countdown/carousel-hero/slide-1-alter-image.jpg" width="412" height="430" layout="responsive" alt="This is the first slide"></amp-img>
+        </div>
+        <amp-img class="amp-img" src="assets/template-countdown/carousel-hero/slide-1-image.jpg" width="412" height="430" layout="responsive" [hidden]="showModel != false" alt="This is the first slide"></amp-img>
+      </div>
+      <div>
+        <div class="amp-3d-gltf-wrapper" [class]="showModel + ' amp-3d-gltf-wrapper'" >
+          <amp-3d-gltf
+            class="amp-3d-gltf"
+            layout="responsive"
+            alpha="true"
+            width="300"
+            height="300"
+            src="assets/template-countdown/carousel-hero/white2.gltf"
+            autoRotate="true"
+          ></amp-3d-gltf>
+          <amp-img class="amp-img" src="assets/template-countdown/carousel-hero/slide-1-alter-image.jpg" width="412" height="430" layout="responsive" alt="This is the second slide"></amp-img>
+        </div>
+        <amp-img class="amp-img" src="assets/template-countdown/carousel-hero/slide-1-image.jpg" width="412" height="430" layout="responsive" [hidden]="showModel != false" alt="This is the second slide"></amp-img>
+      </div>
+  </amp-carousel>
+
+    <amp-selector
+      layout="container"
+      name="carousel-selector"
+      class="bullets"
+      [selected]="selectedSlide"
+      on="select:AMP.setState({selectedSlide: event.targetOption})">
+      <amp-carousel controls layout="fixed-height" height="10">
+          <button option="0" selected>0</button>
+          <button option="1" >1</button>
+      </amp-carousel>
+    </amp-selector>
+  <div class="details is-countdown">
+      <p class="copy-01 heading">Available on Jan 25</p>
+      
+<!-- partial: component/block/carousel-hero/countdown/countdown.hbs -->
+<!--
+NOTE: date should be a ISO with optional time/timezone offset
+-->
+<div class="countdown">
+  <amp-date-countdown
+    class="amp-date-countdown"
+    end-date="2020-01-25T05:59:00+08:00"
+    layout="fixed-height"
+    height="50">
+    <template type="amp-mustache">
+      <div class="part">
+        <span class="heading-01 value"><strong>{{d}}</strong></span>
+        <span class="copy-03 label"><strong>days</strong></span>
+      </div>
+      <div class="part">
+        <span class="heading-01 value"><strong>{{h}}</strong></span>
+        <span class="copy-03 label"><strong>hours</strong></span>
+      </div>
+      <div class="part">
+        <span class="heading-01 value"><strong>{{m}}</strong></span>
+        <span class="copy-03 label"><strong>min</strong></span>
+      </div>
+      <div class="part">
+        <span class="heading-01 value"><strong>{{s}}</strong></span>
+        <span class="copy-03 label"><strong>sec</strong></span>
+      </div>
+    </template>
+  </amp-date-countdown>
+</div>
+<!-- / component/block/carousel-hero/countdown/countdown.hbs -->
+  </div>
+  <button on="tap:AMP.setState({selectedSlide: selectedSlide, showModel: !showModel})" class="model-button">
+    <amp-img src="assets/template-countdown/carousel-hero/3d-icon.png" width="35" height="36" layout="fixed" alt="3d"></amp-img>
+  </button>
+</section>
+<!-- / component/block/carousel-hero/carousel-hero.hbs -->
+    
+<!-- partial: component/block/product-title/product-title.hbs -->
+<section class="product-title">
+  <div class="wrapper">
+    <h1 class="heading-01"><strong>White Classics C 85</strong></h1>
+    <p class="price">$150.50</p>
+  </div>
+</section>
+<!-- / component/block/product-title/product-title.hbs -->
+    
+<!-- partial: component/block/product-description/product-description.hbs -->
+<section class="product-description">
+  <div class="wrapper">
+    <h2 class="heading-02 heading"><strong>Sporty Classics By Phil</strong></h2>
+    <p class="copy-01 copy">The much anticipated collaboration between [Brand] x [Artist] is here - This is your chance to gain exclusive access to their first product release White Classics C 85 through our pop-up event today! Get notified immediately once the product drops on November 12th.</p>
+  </div>
+</section>
+<!-- / component/block/product-description/product-description.hbs -->
+    
+<!-- partial: component/block/product-carousel/product-carousel.hbs -->
+<section class="product-carousel" data-component="product-carousel">
+  <div class="wrapper">
+    <h2 class="heading-02 heading"><strong>Take a Closer Look <br/>Behind the Collaboration</strong></h2>
+  </div>
+  <amp-carousel
+    class="carousel"
+    height="430"
+    layout="fixed-height"
+    [slide]="selectedSlide"
+  >
+        <div class="slide">
+          <amp-img
+            lightbox="product-carousel"
+            aria-describedby="description-0"
+            src="assets/template-countdown/product-carousel/product-gallery-poster-slide-1.jpg"
+            width="310"
+            height="285"
+            layout="responsive"
+            alt="Alt text for image"></amp-img>
+          <div class="description" id="description-0">
+            <p class="copy-02">[Brand] and [Artist] worked closely the past 6 months to release 10 pieces of clothing &amp; shoes that represents a blend of each parties’ authentic style.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <amp-img
+            lightbox="product-carousel"
+            aria-describedby="description-1"
+            src="assets/template-countdown/product-carousel/product-gallery-poster-slide-2.jpg"
+            width="310"
+            height="285"
+            layout="responsive"
+            alt="Alt text for image"></amp-img>
+          <div class="description" id="description-1">
+            <p class="copy-02">[Brand] and [Artist] worked closely the past 6 months to release 10 pieces of clothing &amp; shoes that represents a blend of each parties’ authentic style.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <amp-img
+            lightbox="product-carousel"
+            aria-describedby="description-2"
+            src="assets/template-countdown/product-carousel/product-gallery-poster-slide-3.jpg"
+            width="310"
+            height="285"
+            layout="responsive"
+            alt="Alt text for image"></amp-img>
+          <div class="description" id="description-2">
+            <p class="copy-02">[Brand] and [Artist] worked closely the past 6 months to release 10 pieces of clothing &amp; shoes that represents a blend of each parties’ authentic style.</p>
+          </div>
+        </div>
+  </amp-carousel>
+</section>
+<!-- / component/block/product-carousel/product-carousel.hbs -->
+    
+<!-- partial: component/block/notify/notify.hbs -->
+<section class="notify">
+  <button
+    class="primary-button notify-button"
+    on="tap:notify-me"
+    role="button"
+    tabindex="0">
+    Notify me
+  </button>
+  <amp-lightbox id="notify-me" layout="nodisplay" class="lightbox">
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <button class="primary-button close-button" on="tap:notify-me.close" role="button" tabindex="0">X</button>
+        <p class="copy-01 introduction-copy">Get notified when <strong>White Classics C 85</strong> <br/>releases on <strong>Jan 25</strong></p>
+        <form
+          method="get"
+          class="form"
+          target="_top"
+          action="assets/template-countdown/email-confirmation.html"
+          custom-validation-reporting="show-first-on-submit">
+          <input
+            type="email"
+            autocomplete="off"
+            required
+            name="email"
+            id="email"
+            placeholder="Email address"
+          />
+          <p
+            class="error-message copy-02"
+            validation-for="email"
+            visible-when-invalid="valueMissing">
+          </p>
+          <p
+            class="error-message copy-02"
+            validation-for="email"
+            visible-when-invalid="typeMismatch">
+          </p>
+          <button type="submit" class="primary-button submit-button">Notify me</button>
+        </form>
+      </div>
+    </div>
+  </amp-lightbox>
+</section>
+<!-- / component/block/notify/notify.hbs -->
+</div>
+<!-- / component/layout/app/app.hbs -->
+
+  </div>
+</body>
+</html>

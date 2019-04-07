@@ -1,0 +1,760 @@
+<!--
+  Copyright 2019 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+  <meta charSet="utf-8">
+  <title>How to install vanity</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript>
+    <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+  </noscript>
+  <style amp-custom>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html{
+  line-height:1.15;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%; }
+body{
+  margin:0; }
+article,aside,footer,header,nav,section{
+  display:block; }
+h1{
+  font-size:2em;
+  margin:.67em 0; }
+figcaption,figure,main{
+  display:block; }
+figure{
+  margin:1em 40px; }
+hr{
+  box-sizing:content-box;
+  height:0;
+  overflow:visible; }
+pre{
+  font-family:monospace,monospace;
+  font-size:1em; }
+a{
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects; }
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline;
+  text-decoration:underline dotted; }
+b,strong{
+  font-weight:inherit;
+  font-weight:bolder; }
+code,kbd,samp{
+  font-family:monospace,monospace;
+  font-size:1em; }
+dfn{
+  font-style:italic; }
+mark{
+  background-color:#ff0;
+  color:#000; }
+small{
+  font-size:80%; }
+sub,sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline; }
+
+sub{
+  bottom:-.25em; }
+
+sup{
+  top:-.5em; }
+audio,video{
+  display:inline-block; }
+audio:not([controls]){
+  display:none;
+  height:0; }
+img{
+  border-style:none; }
+svg:not(:root){
+  overflow:hidden; }
+button,input,optgroup,select,textarea{
+  font-family:sans-serif;
+  font-size:100%;
+  line-height:1.15;
+  margin:0; }
+button,input{
+  overflow:visible; }
+button,select{
+  text-transform:none; }
+[type=reset],[type=submit],button,html [type=button]{
+  -webkit-appearance:button; }
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
+  border-style:none;
+  padding:0; }
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
+  outline:1px dotted ButtonText; }
+fieldset{
+  padding:.35em .75em .625em; }
+legend{
+  box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal; }
+progress{
+  display:inline-block;
+  vertical-align:baseline; }
+textarea{
+  overflow:auto; }
+[type=checkbox],[type=radio]{
+  box-sizing:border-box;
+  padding:0; }
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+  height:auto; }
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px; }
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none; }
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit; }
+details,menu{
+  display:block; }
+summary{
+  display:list-item; }
+canvas{
+  display:inline-block; }
+[hidden],template{
+  display:none; }
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-regular-webfont.2431030.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-regular-webfont.c19e834.woff) format("woff");
+  font-weight:400;
+  font-style:normal; }
+
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-bold-webfont.06ed87e.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-bold-webfont.4df447e.woff) format("woff");
+  font-weight:700;
+  font-style:normal; }
+
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-black-webfont.415b255.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-black-webfont.8d2db85.woff) format("woff");
+  font-weight:900;
+  font-style:normal; }
+h1,h2,h3,h4,p{
+  margin:0; }
+
+.heading-01{
+  font:900 3.5rem/1.2 Lato,sans-serif;
+  text-transform:uppercase; }
+
+.heading-02{
+  font:700 2rem/1.2 Lato,sans-serif; }
+
+.heading-03{
+  font:700 1.8rem/1.2 Lato,sans-serif; }
+
+.copy-01{
+  font:1.4rem/1.3 Lato,sans-serif; }
+
+.copy-02{
+  font:1rem/1.2 Lato,sans-serif; }
+
+.abs-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%, -50%);
+      transform:translate(-50%, -50%); }
+
+.abs-fill,.fit-contain{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%; }
+
+.fit-contain{
+  object-fit:contain; }
+
+.fit-cover{
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  position:absolute; }
+
+.bg-cover{
+  background-size:cover;
+  background-position:50%;
+  background-repeat:no-repeat; }
+
+input[type=email],textarea{
+  height:auto;
+  width:100%;
+  font:1.4rem/1.2 Lato,sans-serif;
+  background:transparent;
+  display:block;
+  border:1px solid #28292b;
+  padding:1rem; }
+  input[type=email].placeholder,textarea.placeholder{
+    color:#949494; }
+  input[type=email]:-moz-placeholder,input[type=email]::-moz-placeholder,textarea:-moz-placeholder,textarea::-moz-placeholder{
+    color:#949494; }
+  input[type=email]:-ms-input-placeholder,textarea:-ms-input-placeholder{
+    color:#949494; }
+  input[type=email]::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+    color:#949494; }
+
+input[type=email]{
+  height:3.3rem; }
+
+textarea{
+  resize:none;
+  height:9.6rem; }
+
+.primary-button{
+  height:4.2rem;
+  width:auto;
+  background:linear-gradient(90deg, #cdcccb 0, #ddd7cd 50%, #e6e4e0);
+  display:inline-block;
+  padding:0 4rem;
+  color:#28292b;
+  text-align:center;
+  font-size:1.4rem;
+  font-weight:900;
+  font-family:Lato,sans-serif;
+  line-height:calc(4.2rem - 4px);
+  text-transform:uppercase;
+  border-radius:1rem;
+  position:relative;
+  border:2px solid #8d7e66;
+  -webkit-appearance:none; }
+
+*,body,html{
+  -webkit-tap-highlight-color:transparent; }
+
+.wrapper{
+  width:calc(100% - 4rem);
+  margin:0 auto;
+  box-sizing:border-box; }
+  .wrapper .break-out-wrapper{
+    width:calc(100% + 4rem);
+    margin-left:-2rem; }
+
+html{
+  font-size:10px;
+  box-sizing:border-box; }
+
+body{
+  overflow:hidden;
+  width:100%; }
+
+*,:after,:before{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  box-sizing:inherit; }
+
+body{
+  font-family:Lato,sans-serif;
+  color:#d4d2d7;
+  background-color:#1a1a1a; }
+
+#app{
+  background:#1a1a1a url(assets/template-howto/images/main-background.293270f.png) repeat-y;
+  background-size:100% auto;
+  margin:0 auto;
+  max-width:45rem; }
+
+figure{
+  margin:0; }
+.hero header{
+  height:6.8rem;
+  width:100%;
+  background:#e8e7e4;
+  position:relative; }
+  .hero header svg{
+    height:3.6rem;
+    width:3.6rem; }
+.video-player{
+  position:relative; }
+  .video-player .play-button{
+    height:5rem;
+    width:5rem;
+    padding:0;
+    border-radius:0;
+    -webkit-appearance:none;
+    background:transparent;
+    border:0; }
+  .video-player .video-overlay{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute; }
+.heading{
+  text-align:center;
+  padding:4rem 0; }
+  .heading .sub-title{
+    margin-bottom:1rem; }
+.gallery{
+  margin-bottom:1.6rem; }
+  .gallery .gallery-top{
+    position:relative; }
+    .gallery .gallery-top .amp-carousel-button-next,.gallery .gallery-top .amp-carousel-button-prev,.gallery .gallery-top figcaption{
+      display:none; }
+    .gallery .gallery-top .bullets{
+      width:100%;
+      position:absolute;
+      bottom:2rem;
+      left:0;
+      text-align:center; }
+      .gallery .gallery-top .bullets button{
+        height:.8rem;
+        width:.8rem;
+        display:inline-block;
+        vertical-align:top;
+        margin:0 .2rem;
+        background:#fff;
+        border-radius:50%;
+        font-size:0;
+        padding:0;
+        border:none; }
+        .gallery .gallery-top .bullets button[selected]{
+          background:#4a4a4a;
+          outline:none; }
+  .gallery .gallery-bottom{
+    margin-top:1.2rem; }
+    .gallery .gallery-bottom.padding-right .description{
+      padding-right:11.5rem; }
+  .gallery .description{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:start;
+        justify-content:flex-start;
+    -ms-flex-align:start;
+        align-items:flex-start;
+    -ms-flex-direction:row;
+        flex-direction:row; }
+    .gallery .description .index{
+      margin-right:1rem;
+      font:700 3.5rem/1 Helvetica,sans-serif,normal; }
+    .gallery .description .title{
+      margin-bottom:.5rem; }
+.block-title{
+  padding:0 3rem;
+  margin-bottom:2rem; }
+  .block-title .heading-03{
+    position:relative;
+    padding-left:1rem; }
+    .block-title .heading-03:before{
+      content:"";
+      display:block;
+      height:1px;
+      width:3rem;
+      background:linear-gradient(90deg, #675a3e 0, #ddb583);
+      position:absolute;
+      top:50%;
+      left:-3rem;
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%); }
+.full-product-guide{
+  height:auto;
+  width:100%;
+  position:relative;
+  margin-bottom:3.6rem; }
+  .full-product-guide .product-guide-button{
+    height:4.6rem;
+    width:100%;
+    font:700 1.2rem/calc(4.6rem - 2px) Lato,sans-serif;
+    background:linear-gradient(90deg, #675a3e, #ddb583);
+    padding:1px;
+    text-transform:uppercase;
+    border:none;
+    color:#d4d2d7;
+    -webkit-appearance:none;
+    border-radius:1.7rem;
+    text-align:left; }
+    .full-product-guide .product-guide-button .button-inner{
+      height:100%;
+      width:100%;
+      display:block;
+      text-align:center;
+      background:#1a1a1a;
+      border-radius:1.7rem; }
+  .full-product-guide .lightbox{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#1a1a1a;
+    position:absolute;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+        align-items:center;
+    -ms-flex-pack:center;
+        justify-content:center; }
+  .full-product-guide .lightbox-content{
+    height:100%;
+    width:100%;
+    margin:0 auto;
+    padding:5rem;
+    border-radius:2rem;
+    position:relative;
+    text-align:center; }
+    .full-product-guide .lightbox-content .title{
+      margin-bottom:2rem; }
+    .full-product-guide .lightbox-content .copy{
+      display:block;
+      margin-bottom:2rem; }
+      .full-product-guide .lightbox-content .copy:last-child{
+        margin-bottom:4rem; }
+  .full-product-guide .close-button{
+    height:1.1rem;
+    width:1.1rem;
+    background:transparent;
+    padding:0;
+    color:#d4d2d7;
+    position:absolute;
+    border:0;
+    top:2rem;
+    right:2rem; }
+    .full-product-guide .close-button svg{
+      height:100%;
+      width:100%; }
+.hotspot{
+  margin-bottom:8rem; }
+  .hotspot .hotspots{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute; }
+  .hotspot .inner-wrapper{
+    padding:0 4rem;
+    margin-top:4rem; }
+  .hotspot .hotspot-wrapper{
+    width:100%;
+    position:relative; }
+  .hotspot .hotspot{
+    font-size:0;
+    border:0;
+    position:absolute;
+    -webkit-appearance:none;
+    padding:0;
+    outline:none;
+    margin:0;
+    background:transparent; }
+    .hotspot .hotspot .circle{
+      height:.9rem;
+      width:.9rem;
+      background:linear-gradient(90deg, #868178 0, #e1d4c2);
+      transition:transform .5s cubic-bezier(1, 0, 0, 1);
+      border-radius:50%;
+      z-index:1; }
+      .hotspot .hotspot .circle,.hotspot .hotspot .circle:before{
+      top:50%;
+      left:50%;
+      position:absolute;
+      -ms-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%); }
+      .hotspot .hotspot .circle:before{
+        content:"";
+        display:block;
+        height:3.2rem;
+        width:3.2rem;
+        border-radius:50%;
+        border:1px solid #ddb583;
+        opacity:0; }
+    .hotspot .hotspot:after{
+      content:"";
+      display:block;
+      position:absolute;
+      top:0;
+      width:1px;
+      height:1px;
+      background-color:#ddb583;
+      opacity:0;
+      transition:opacity .2s ease-in-out,height .3s ease-in-out; }
+    .hotspot .hotspot[selected]:after{
+      opacity:1; }
+    .hotspot .hotspot[selected][option="0"]:after{
+      height:100px; }
+    .hotspot .hotspot[selected][option="1"]:after{
+      height:150px; }
+    .hotspot .hotspot[selected][option="2"]:after,.hotspot .hotspot[selected][option="3"]:after{
+      height:320px; }
+    .hotspot .hotspot[selected][option="4"]:after{
+      height:140px; }
+    .hotspot .hotspot[selected][option="5"]:after{
+      height:100px; }
+    .hotspot .hotspot[selected] .circle{
+      height:1.8rem;
+      width:1.8rem;
+      background:linear-gradient(90deg, #675a3e 0, #ddb583); }
+      .hotspot .hotspot[selected] .circle:before{
+        opacity:1; }
+  .hotspot .hotspot-description{
+    background:linear-gradient(90deg, #675a3e, #ddb583);
+    border-radius:.5rem;
+    margin-top:2rem;
+    padding:1px;
+    position:relative; }
+    .hotspot .hotspot-description .hotspot-inner{
+      background:#3d3d3d;
+      display:block;
+      padding:1.9rem 4.4rem 2.5rem 3.2rem;
+      border-radius:6px;
+      z-index:1; }
+    .hotspot .hotspot-description .title{
+      margin-bottom:1rem; }
+.accordion{
+  color:#28292b;
+  margin-top:5rem; }
+  .accordion section{
+    position:relative; }
+    .accordion section:after{
+      content:"";
+      display:block;
+      height:1px;
+      width:calc(100% - 4rem);
+      background:#bcbbb9;
+      position:absolute;
+      bottom:0;
+      left:50%;
+      -ms-transform:translateX(-50%);
+          transform:translateX(-50%); }
+  .accordion .toggle{
+    position:relative; }
+    .accordion .toggle .icon{
+      height:1.5rem;
+      width:1.5rem;
+      position:absolute;
+      top:50%;
+      right:4rem;
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%); }
+  .accordion .toggle{
+    padding:3rem 2rem;
+    background:#e8e7e4;
+    border:0;
+    outline:0; }
+    .accordion .toggle:focus{
+      outline:none; }
+    .accordion .toggle .heading-03{
+      padding-left:1rem; }
+    .accordion .toggle~div{
+      background:#e8e7e4;
+      padding:0 1rem 2rem; }
+      .accordion .toggle~div p{
+        margin-bottom:1rem;
+        font:1.2rem/1.2 Lato,sans-serif; }
+.form{
+  background:#e8e7e4;
+  color:#28292b;
+  padding:2rem 1rem 6rem;
+  position:relative;
+  z-index:0;
+  text-align:center; }
+  .form .title{
+    margin-bottom:1.6rem; }
+  .form .row,.form .title{
+    text-align:left; }
+    .form .row.small-spacing{
+      margin-bottom:1rem; }
+    .form .row.large-spacing{
+      margin-bottom:2rem; }
+  .form .primary-button{
+    margin-top:1.7rem;
+    width:16.5rem; }
+  .form [visible-when-invalid]{
+    margin-top:.5rem; }
+.custom-radio{
+  width:100%;
+  white-space:nowrap;
+  display:inline-block;
+  font-size:0;
+  overflow-x:auto; }
+  .custom-radio .radio{
+    height:2.5rem;
+    width:5.9rem;
+    display:inline-block;
+    border-radius:1rem;
+    border:2px solid #000;
+    text-align:center;
+    line-height:calc(2.5rem - 4px);
+    position:relative;
+    padding:0 1.25rem;
+    text-transform:uppercase; }
+    .custom-radio .radio:not(:last-child){
+      margin-right:1.8rem; }
+    .custom-radio .radio[selected]{
+      color:#fff;
+      outline:0;
+      background:#000;
+      border-color:#000; }
+
+      footer .footer {
+        height: 6.8rem;
+        width: 100%;
+        background: #e8e7e4;
+        position: relative;
+      }
+
+      footer img {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);   
+      }
+  </style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- partial: component/layout/app/app.hbs -->
+    <div data-component="app-root">
+
+      <!-- partial: component/block/markup/markup.hbs -->
+      <script type="application/ld+json">
+ {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "ARImageTarget",
+      "name" : "How To Install a Bathroom Vanity",
+      "image": "https://googlelenshack.herokuapp.com/assets/lowes-images/bath/taget-bathroom-vanity.jpg"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "name": "Find out how to upgrade your bathroom DIY",
+      "description": "Step by step guid on intalling your new vanity.",
+      "image": "https://googlelenshack.herokuapp.com/assets/lowes-images/bath/bathtoom-van,jpg",
+      "url": "http://googlelenshack.herokuapp.com/install-vanity.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Lowes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Lowes_Companies_Logo.svg/2000px-Lowes_Companies_Logo.svg.png"
+      }
+    }
+  }
+</script>
+      <!-- / component/block/markup/markup.hbs -->
+
+      <!-- partial: component/block/hero/hero.hbs -->
+      <div class="hero" data-component="hero">
+        <header>
+          <img width="60px" class="abs-center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Lowes_Companies_Logo.svg/2000px-Lowes_Companies_Logo.svg.png" />
+        </header>
+
+        <!-- partial: component/video-player/video-player.hbs -->
+        <div class="video-player" data-component="video-player">
+          <amp-video
+            id="video-hero"
+            src="assets/install-vanity/videos/how-to-intall-vanity.mp4"
+            poster="assets/lowes-images/bath/vanity-poster.png"
+            width="412"
+            height="234"
+            layout="responsive"
+            controls>
+          </amp-video>
+
+          <div id="video-overlay-hero" class="video-overlay">
+            <amp-img class="poster-image" width="412" height="234" layout="responsive" src="assets/lowes-images/bath/vanity-poster.png"></amp-img>
+            <button class="abs-center play-button" role="button" tabindex="0" on="tap:video-overlay-hero.hide, video-hero.play">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+                <defs>
+                  <path id="path-1" d="M12.5 4L28 28H-3z" />
+                  <filter id="filter-2" width="132.3%" height="141.7%" x="-16.1%" y="-16.7%" filterUnits="objectBoundingBox">
+                    <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1" />
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5" />
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.267617985 0 0 0 0 0.237814017 0 0 0 0 0.237814017 0 0 0 0.2 0" />
+                  </filter>
+                </defs>
+                <g id="Symbols" fill="none" fill-rule="evenodd">
+                  <g id="producthowto:play-button" fill-rule="nonzero" transform="translate(1 1)">
+                    <g id="Group">
+                      <circle id="Oval" cx="29" cy="29" r="29" fill="#555" fill-opacity=".32300158" stroke="#FFF" />
+                      <g id="play_icon-copy-4" transform="translate(20 13)">
+                        <g id="Triangle-Copy" transform="matrix(0 -1 -1 0 28.5 28.5)">
+                          <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1" />
+                          <use fill="#E9E9E9" xlink:href="#path-1" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+        <!-- / component/video-player/video-player.hbs -->
+      </div>
+      <!-- / component/block/hero/hero.hbs -->
+
+      <!-- partial: component/block/heading/heading.hbs -->
+      <div class="heading" data-component="heading">
+        <div class="wrapper" style="margin-bottom: 30px">
+          <p class="copy-01 sub-title">A worn-out sink and vanity can really be a sore thumb. You’ll be glad to know
+            replacing them is probably easier than you think.</p>
+          <h3 class="heading-03">Take Your Bath To The Next Level</h1>
+        </div>
+        <div class="wrapper">
+          <h1 class="heading-01">Install a Bathroom Vanity</h1>
+        </div>
+      </div>
+      <!-- / component/block/heading/heading.hbs -->
+
+      <!-- partial: component/general/block-title/block-title.hbs -->
+      <div class="block-title" data-component="block-title">
+        <h2 class="heading-03">What more inspiration?</h2>
+      </div>
+      <div class="wrapper" style="margin-bottom: 20px">
+        <div calss="copy">
+          <p class="copy-01">Installing a new vanity is a bathroom update that makes a huge difference. Learn how to
+            replace a bathroom vanity from Lowe's. View the full detailed plan by clicking <a href="http://low.es/1gtZBub">here</a>.</p>
+          <br />
+          <p class="copy-01">Not sure which vanity will work best for you space? Use the <a href="http://low.es/1krBcNp">Lowe's
+              Vanity Buying Guide</a> to choose the look you'll love for years.</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer">
+            <img width="60px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Lowes_Companies_Logo.svg/2000px-Lowes_Companies_Logo.svg.png" />
+        </div>
+      </footer>
+</body>
+
+</html>

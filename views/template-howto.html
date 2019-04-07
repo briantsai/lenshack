@@ -1,0 +1,1372 @@
+<!--
+  Copyright 2019 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+  <meta charSet="utf-8">
+  <title>Product how-to</title>
+  <link rel="canonical" href="https://lens-templates.firebaseapp.com/template-howto.html">
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html{
+  line-height:1.15;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%; }
+body{
+  margin:0; }
+article,aside,footer,header,nav,section{
+  display:block; }
+h1{
+  font-size:2em;
+  margin:.67em 0; }
+figcaption,figure,main{
+  display:block; }
+figure{
+  margin:1em 40px; }
+hr{
+  box-sizing:content-box;
+  height:0;
+  overflow:visible; }
+pre{
+  font-family:monospace,monospace;
+  font-size:1em; }
+a{
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects; }
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline;
+  text-decoration:underline dotted; }
+b,strong{
+  font-weight:inherit;
+  font-weight:bolder; }
+code,kbd,samp{
+  font-family:monospace,monospace;
+  font-size:1em; }
+dfn{
+  font-style:italic; }
+mark{
+  background-color:#ff0;
+  color:#000; }
+small{
+  font-size:80%; }
+sub,sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline; }
+
+sub{
+  bottom:-.25em; }
+
+sup{
+  top:-.5em; }
+audio,video{
+  display:inline-block; }
+audio:not([controls]){
+  display:none;
+  height:0; }
+img{
+  border-style:none; }
+svg:not(:root){
+  overflow:hidden; }
+button,input,optgroup,select,textarea{
+  font-family:sans-serif;
+  font-size:100%;
+  line-height:1.15;
+  margin:0; }
+button,input{
+  overflow:visible; }
+button,select{
+  text-transform:none; }
+[type=reset],[type=submit],button,html [type=button]{
+  -webkit-appearance:button; }
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
+  border-style:none;
+  padding:0; }
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
+  outline:1px dotted ButtonText; }
+fieldset{
+  padding:.35em .75em .625em; }
+legend{
+  box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal; }
+progress{
+  display:inline-block;
+  vertical-align:baseline; }
+textarea{
+  overflow:auto; }
+[type=checkbox],[type=radio]{
+  box-sizing:border-box;
+  padding:0; }
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+  height:auto; }
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px; }
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none; }
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit; }
+details,menu{
+  display:block; }
+summary{
+  display:list-item; }
+canvas{
+  display:inline-block; }
+[hidden],template{
+  display:none; }
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-regular-webfont.2431030.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-regular-webfont.c19e834.woff) format("woff");
+  font-weight:400;
+  font-style:normal; }
+
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-bold-webfont.06ed87e.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-bold-webfont.4df447e.woff) format("woff");
+  font-weight:700;
+  font-style:normal; }
+
+@font-face{
+  font-family:Lato;
+  src:url(/assets/template-howto/fonts/lato-black-webfont.415b255.woff2) format("woff2"), url(/assets/template-howto/fonts/lato-black-webfont.8d2db85.woff) format("woff");
+  font-weight:900;
+  font-style:normal; }
+h1,h2,h3,h4,p{
+  margin:0; }
+
+.heading-01{
+  font:900 3.5rem/1.2 Lato,sans-serif;
+  text-transform:uppercase; }
+
+.heading-02{
+  font:700 2rem/1.2 Lato,sans-serif; }
+
+.heading-03{
+  font:700 1.8rem/1.2 Lato,sans-serif; }
+
+.copy-01{
+  font:1.4rem/1.3 Lato,sans-serif; }
+
+.copy-02{
+  font:1rem/1.2 Lato,sans-serif; }
+
+.abs-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%, -50%);
+      transform:translate(-50%, -50%); }
+
+.abs-fill,.fit-contain{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%; }
+
+.fit-contain{
+  object-fit:contain; }
+
+.fit-cover{
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  position:absolute; }
+
+.bg-cover{
+  background-size:cover;
+  background-position:50%;
+  background-repeat:no-repeat; }
+
+input[type=email],textarea{
+  height:auto;
+  width:100%;
+  font:1.4rem/1.2 Lato,sans-serif;
+  background:transparent;
+  display:block;
+  border:1px solid #28292b;
+  padding:1rem; }
+  input[type=email].placeholder,textarea.placeholder{
+    color:#949494; }
+  input[type=email]:-moz-placeholder,input[type=email]::-moz-placeholder,textarea:-moz-placeholder,textarea::-moz-placeholder{
+    color:#949494; }
+  input[type=email]:-ms-input-placeholder,textarea:-ms-input-placeholder{
+    color:#949494; }
+  input[type=email]::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+    color:#949494; }
+
+input[type=email]{
+  height:3.3rem; }
+
+textarea{
+  resize:none;
+  height:9.6rem; }
+
+.primary-button{
+  height:4.2rem;
+  width:auto;
+  background:linear-gradient(90deg, #cdcccb 0, #ddd7cd 50%, #e6e4e0);
+  display:inline-block;
+  padding:0 4rem;
+  color:#28292b;
+  text-align:center;
+  font-size:1.4rem;
+  font-weight:900;
+  font-family:Lato,sans-serif;
+  line-height:calc(4.2rem - 4px);
+  text-transform:uppercase;
+  border-radius:1rem;
+  position:relative;
+  border:2px solid #8d7e66;
+  -webkit-appearance:none; }
+
+*,body,html{
+  -webkit-tap-highlight-color:transparent; }
+
+.wrapper{
+  width:calc(100% - 4rem);
+  margin:0 auto;
+  box-sizing:border-box; }
+  .wrapper .break-out-wrapper{
+    width:calc(100% + 4rem);
+    margin-left:-2rem; }
+
+html{
+  font-size:10px;
+  box-sizing:border-box; }
+
+body{
+  overflow:hidden;
+  width:100%; }
+
+*,:after,:before{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  box-sizing:inherit; }
+
+body{
+  font-family:Lato,sans-serif;
+  color:#d4d2d7;
+  background-color:#1a1a1a; }
+
+#app{
+  background:#1a1a1a url(assets/template-howto/images/main-background.293270f.png) repeat-y;
+  background-size:100% auto;
+  margin:0 auto;
+  max-width:45rem; }
+
+figure{
+  margin:0; }
+.hero header{
+  height:6.8rem;
+  width:100%;
+  background:#e8e7e4;
+  position:relative; }
+  .hero header svg{
+    height:3.6rem;
+    width:3.6rem; }
+.video-player{
+  position:relative; }
+  .video-player .play-button{
+    height:5rem;
+    width:5rem;
+    padding:0;
+    border-radius:0;
+    -webkit-appearance:none;
+    background:transparent;
+    border:0; }
+  .video-player .video-overlay{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute; }
+.heading{
+  text-align:center;
+  padding:4rem 0; }
+  .heading .sub-title{
+    margin-bottom:1rem; }
+.gallery{
+  margin-bottom:1.6rem; }
+  .gallery .gallery-top{
+    position:relative; }
+    .gallery .gallery-top .amp-carousel-button-next,.gallery .gallery-top .amp-carousel-button-prev,.gallery .gallery-top figcaption{
+      display:none; }
+    .gallery .gallery-top .bullets{
+      width:100%;
+      position:absolute;
+      bottom:2rem;
+      left:0;
+      text-align:center; }
+      .gallery .gallery-top .bullets button{
+        height:.8rem;
+        width:.8rem;
+        display:inline-block;
+        vertical-align:top;
+        margin:0 .2rem;
+        background:#fff;
+        border-radius:50%;
+        font-size:0;
+        padding:0;
+        border:none; }
+        .gallery .gallery-top .bullets button[selected]{
+          background:#4a4a4a;
+          outline:none; }
+  .gallery .gallery-bottom{
+    margin-top:1.2rem; }
+    .gallery .gallery-bottom.padding-right .description{
+      padding-right:11.5rem; }
+  .gallery .description{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:start;
+        justify-content:flex-start;
+    -ms-flex-align:start;
+        align-items:flex-start;
+    -ms-flex-direction:row;
+        flex-direction:row; }
+    .gallery .description .index{
+      margin-right:1rem;
+      font:700 3.5rem/1 Helvetica,sans-serif,normal; }
+    .gallery .description .title{
+      margin-bottom:.5rem; }
+.block-title{
+  padding:0 3rem;
+  margin-bottom:2rem; }
+  .block-title .heading-03{
+    position:relative;
+    padding-left:1rem; }
+    .block-title .heading-03:before{
+      content:"";
+      display:block;
+      height:1px;
+      width:3rem;
+      background:linear-gradient(90deg, #675a3e 0, #ddb583);
+      position:absolute;
+      top:50%;
+      left:-3rem;
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%); }
+.full-product-guide{
+  height:auto;
+  width:100%;
+  position:relative;
+  margin-bottom:3.6rem; }
+  .full-product-guide .product-guide-button{
+    height:4.6rem;
+    width:100%;
+    font:700 1.2rem/calc(4.6rem - 2px) Lato,sans-serif;
+    background:linear-gradient(90deg, #675a3e, #ddb583);
+    padding:1px;
+    text-transform:uppercase;
+    border:none;
+    color:#d4d2d7;
+    -webkit-appearance:none;
+    border-radius:1.7rem;
+    text-align:left; }
+    .full-product-guide .product-guide-button .button-inner{
+      height:100%;
+      width:100%;
+      display:block;
+      text-align:center;
+      background:#1a1a1a;
+      border-radius:1.7rem; }
+  .full-product-guide .lightbox{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#1a1a1a;
+    position:absolute;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+        align-items:center;
+    -ms-flex-pack:center;
+        justify-content:center; }
+  .full-product-guide .lightbox-content{
+    height:100%;
+    width:100%;
+    margin:0 auto;
+    padding:5rem;
+    border-radius:2rem;
+    position:relative;
+    text-align:center; }
+    .full-product-guide .lightbox-content .title{
+      margin-bottom:2rem; }
+    .full-product-guide .lightbox-content .copy{
+      display:block;
+      margin-bottom:2rem; }
+      .full-product-guide .lightbox-content .copy:last-child{
+        margin-bottom:4rem; }
+  .full-product-guide .close-button{
+    height:1.1rem;
+    width:1.1rem;
+    background:transparent;
+    padding:0;
+    color:#d4d2d7;
+    position:absolute;
+    border:0;
+    top:2rem;
+    right:2rem; }
+    .full-product-guide .close-button svg{
+      height:100%;
+      width:100%; }
+.hotspot{
+  margin-bottom:8rem; }
+  .hotspot .hotspots{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute; }
+  .hotspot .inner-wrapper{
+    padding:0 4rem;
+    margin-top:4rem; }
+  .hotspot .hotspot-wrapper{
+    width:100%;
+    position:relative; }
+  .hotspot .hotspot{
+    font-size:0;
+    border:0;
+    position:absolute;
+    -webkit-appearance:none;
+    padding:0;
+    outline:none;
+    margin:0;
+    background:transparent; }
+    .hotspot .hotspot .circle{
+      height:.9rem;
+      width:.9rem;
+      background:linear-gradient(90deg, #868178 0, #e1d4c2);
+      transition:transform .5s cubic-bezier(1, 0, 0, 1);
+      border-radius:50%;
+      z-index:1; }
+      .hotspot .hotspot .circle,.hotspot .hotspot .circle:before{
+      top:50%;
+      left:50%;
+      position:absolute;
+      -ms-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%); }
+      .hotspot .hotspot .circle:before{
+        content:"";
+        display:block;
+        height:3.2rem;
+        width:3.2rem;
+        border-radius:50%;
+        border:1px solid #ddb583;
+        opacity:0; }
+    .hotspot .hotspot:after{
+      content:"";
+      display:block;
+      position:absolute;
+      top:0;
+      width:1px;
+      height:1px;
+      background-color:#ddb583;
+      opacity:0;
+      transition:opacity .2s ease-in-out,height .3s ease-in-out; }
+    .hotspot .hotspot[selected]:after{
+      opacity:1; }
+    .hotspot .hotspot[selected][option="0"]:after{
+      height:100px; }
+    .hotspot .hotspot[selected][option="1"]:after{
+      height:150px; }
+    .hotspot .hotspot[selected][option="2"]:after,.hotspot .hotspot[selected][option="3"]:after{
+      height:320px; }
+    .hotspot .hotspot[selected][option="4"]:after{
+      height:140px; }
+    .hotspot .hotspot[selected][option="5"]:after{
+      height:100px; }
+    .hotspot .hotspot[selected] .circle{
+      height:1.8rem;
+      width:1.8rem;
+      background:linear-gradient(90deg, #675a3e 0, #ddb583); }
+      .hotspot .hotspot[selected] .circle:before{
+        opacity:1; }
+  .hotspot .hotspot-description{
+    background:linear-gradient(90deg, #675a3e, #ddb583);
+    border-radius:.5rem;
+    margin-top:2rem;
+    padding:1px;
+    position:relative; }
+    .hotspot .hotspot-description .hotspot-inner{
+      background:#3d3d3d;
+      display:block;
+      padding:1.9rem 4.4rem 2.5rem 3.2rem;
+      border-radius:6px;
+      z-index:1; }
+    .hotspot .hotspot-description .title{
+      margin-bottom:1rem; }
+.accordion{
+  color:#28292b;
+  margin-top:5rem; }
+  .accordion section{
+    position:relative; }
+    .accordion section:after{
+      content:"";
+      display:block;
+      height:1px;
+      width:calc(100% - 4rem);
+      background:#bcbbb9;
+      position:absolute;
+      bottom:0;
+      left:50%;
+      -ms-transform:translateX(-50%);
+          transform:translateX(-50%); }
+  .accordion .toggle{
+    position:relative; }
+    .accordion .toggle .icon{
+      height:1.5rem;
+      width:1.5rem;
+      position:absolute;
+      top:50%;
+      right:4rem;
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%); }
+  .accordion .toggle{
+    padding:3rem 2rem;
+    background:#e8e7e4;
+    border:0;
+    outline:0; }
+    .accordion .toggle:focus{
+      outline:none; }
+    .accordion .toggle .heading-03{
+      padding-left:1rem; }
+    .accordion .toggle~div{
+      background:#e8e7e4;
+      padding:0 1rem 2rem; }
+      .accordion .toggle~div p{
+        margin-bottom:1rem;
+        font:1.2rem/1.2 Lato,sans-serif; }
+.form{
+  background:#e8e7e4;
+  color:#28292b;
+  padding:2rem 1rem 6rem;
+  position:relative;
+  z-index:0;
+  text-align:center; }
+  .form .title{
+    margin-bottom:1.6rem; }
+  .form .row,.form .title{
+    text-align:left; }
+    .form .row.small-spacing{
+      margin-bottom:1rem; }
+    .form .row.large-spacing{
+      margin-bottom:2rem; }
+  .form .primary-button{
+    margin-top:1.7rem;
+    width:16.5rem; }
+  .form [visible-when-invalid]{
+    margin-top:.5rem; }
+.custom-radio{
+  width:100%;
+  white-space:nowrap;
+  display:inline-block;
+  font-size:0;
+  overflow-x:auto; }
+  .custom-radio .radio{
+    height:2.5rem;
+    width:5.9rem;
+    display:inline-block;
+    border-radius:1rem;
+    border:2px solid #000;
+    text-align:center;
+    line-height:calc(2.5rem - 4px);
+    position:relative;
+    padding:0 1.25rem;
+    text-transform:uppercase; }
+    .custom-radio .radio:not(:last-child){
+      margin-right:1.8rem; }
+    .custom-radio .radio[selected]{
+      color:#fff;
+      outline:0;
+      background:#000;
+      border-color:#000; }
+
+  </style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+</head>
+<body>
+  <div id="app">
+    
+<!-- partial: component/layout/app/app.hbs -->
+<div data-component="app-root">
+    
+<!-- partial: component/block/markup/markup.hbs -->
+<script type="application/ld+json">
+ {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "ARImageTarget",
+      "name" : "Hyper Turbo Vacuum",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-howto/images/vacuum.png"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "name": "Hyper Turbo Vacuum",
+      "description": "Congratulations on the purchase of your new B34 hyper Turbo Vacuum.",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-howto/images/how-to_thumbnail.png",
+      "url": "https://lens-templates.firebaseapp.com/template-howto.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hyper Turbo Vacuum",
+        "logo": "https://lens-templates.firebaseapp.com/assets/template-howto/images/how-to_logo.png"
+      }
+    }
+  }
+
+</script>
+<!-- / component/block/markup/markup.hbs -->
+    
+<!-- partial: component/block/hero/hero.hbs -->
+<div class="hero" data-component="hero">
+  <header>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" class="abs-center">
+      <g id="Editorial/Unlock-" fill="none" fill-rule="evenodd">
+        <g id="How-to-Product" transform="translate(-187 -80)">
+          <g id="Logo" transform="translate(188 81)">
+            <g id="Group-3" fill="#262626" transform="translate(7 5)">
+              <path id="Fill-1" d="M8.46153846 17.7692303c0-2.3368043-1.89409748-4.2307688-4.23076923-4.2307688C1.89396492 13.5384615 0 15.4325588 0 17.7692303 0 20.1060353 1.89409748 22 4.23076923 22c2.33680454 0 4.23076923-1.8940975 4.23076923-4.2307697zm-7.15979736 0c0-1.6174607 1.31143445-2.9288065 2.92880682-2.9288065 1.6174609 0 2.92880682 1.3114343 2.92880682 2.9288065 0 1.6174608-1.31143444 2.9288072-2.92880682 2.9288072-1.6174609 0-2.92880682-1.3114349-2.92880682-2.9288072z"/>
+              <path id="Fill-2" d="M6.66929321 8.83689814l6.10143999 6.77536336c-.2107162.266399-.4315479.5018658-.6506879.7046845-.0084282.0085932-.0177.0163284-.0261281.0240637-.4956112-.5345359-1.1142782-1.0063275-1.8677825-1.3904708-1.17242929-.5972581-2.421631-.9796854-3.6698833-1.1919642-.43743853-.073907-.8437193-.1220322-1.20952088-.1486721-.22421071-.0163284-.38772421-.0214852-.48128379-.0214852-.35063267 0-.6346775.289609-.6346775.6471102 0 .3575012.28404483.6471102.6346775.6471102.06405897 0 .19807401.0042966.39109028.0180467.32786852.0240637.69453319.067032 1.09067259.1349221 1.13197172.1916404 2.26217409.5379678 3.31083549 1.0725037.96170451.4907117 1.63599811 1.1369661 2.07850731 1.8708644.1753163.289609.3093335.567184.4079422.8224289.0564724.1460937.0876582.2457848.0977715.288751.0058993.0240615.0134859.0481251.021914.0713286.3371468.9135101-.0927159 1.5442962-1.0544225 1.5442962H4.86557188c-.35063267 0-.6346775.289609-.6346775.6471103 0 .3575012.28404483.6471103.6346775.6471103h6.34418572c1.7169133 0 2.7392503-1.3234367 2.3558199-2.9235911-.0295006-.1220322-.1298009-.4434335-.1567727-.5267918-.101144-.3102451-.2764496-.7150025-.546167-1.1738999.0353999-.0309365.0724871-.0644536.1104158-.1005469.2242108-.2071109.4475584-.4408617.6641738-.7003944l3.7195114 4.1309534h-2.0203562c-.3506327 0-.6346775.289609-.6346775.6471102 0 .3575012.2840448.6471102.6346775.6471102h6.0289399c.3506327 0 .6346775-.289609.6346775-.6471102 0-.3575012-.2840448-.6471102-.6346775-.6471102h-2.306192c-.0227577-.04039-.0505731-.0782037-.0826004-.114297l-4.5869226-5.0934567c.599269-1.0355436.9465356-2.2136499.9465356-3.5277122V5.17683789C15.3361431 2.31770801 13.0629645 0 10.2596293 0 7.45543108 0 5.18225251 2.31770801 5.18225251 5.17683789c0 1.3904708.54111792 2.69588932 1.48681198 3.66015045l.00022872-.0000902zm.91619777-.8954691C6.8572539 7.19806847 6.45183623 6.2209571 6.45183623 5.17689949c0-2.14414941 1.70511048-3.88257342 3.80797867-3.88257342 2.1028682 0 3.8073313 1.73851201 3.8073313 3.88257342V11.970325c0 .9221112-.2098746 1.7625801-.5841 2.5205487L7.58549098 7.94142904z"/>
+            </g>
+            <circle id="Oval" cx="18" cy="18" r="18" fill-rule="nonzero" stroke="#262626" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </header>
+  
+<!-- partial: component/video-player/video-player.hbs -->
+<div class="video-player" data-component="video-player">
+  <amp-video
+    id="video-hero"
+    src="assets/template-howto/videos/dummy-video.mp4"
+    poster="assets/template-howto/images/hero/hero-poster-image.jpg"
+    width="412"
+    height="234"
+    layout="responsive"
+    controls>
+  </amp-video>
+
+  <div id="video-overlay-hero" class="video-overlay">
+    <amp-img class="poster-image"  width="412" height="234" layout="responsive" src="assets/template-howto/images/hero/hero-poster-image.jpg"></amp-img>
+    <button
+      class="abs-center play-button"
+      role="button"
+      tabindex="0"
+      on="tap:video-overlay-hero.hide, video-hero.play">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+        <defs>
+          <path id="path-1" d="M12.5 4L28 28H-3z"/>
+          <filter id="filter-2" width="132.3%" height="141.7%" x="-16.1%" y="-16.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.267617985 0 0 0 0 0.237814017 0 0 0 0 0.237814017 0 0 0 0.2 0"/>
+          </filter>
+        </defs>
+        <g id="Symbols" fill="none" fill-rule="evenodd">
+          <g id="producthowto:play-button" fill-rule="nonzero" transform="translate(1 1)">
+            <g id="Group">
+              <circle id="Oval" cx="29" cy="29" r="29" fill="#555" fill-opacity=".32300158" stroke="#FFF"/>
+              <g id="play_icon-copy-4" transform="translate(20 13)">
+                <g id="Triangle-Copy" transform="matrix(0 -1 -1 0 28.5 28.5)">
+                  <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1"/>
+                  <use fill="#E9E9E9" xlink:href="#path-1"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+</div>
+<!-- / component/video-player/video-player.hbs -->
+</div>
+<!-- / component/block/hero/hero.hbs -->
+    
+<!-- partial: component/block/heading/heading.hbs -->
+<div class="heading" data-component="heading">
+  <div class="wrapper">
+    <p class="copy-01 sub-title">The Starter Kit</p>
+    <h1 class="heading-01">THE B34 Hyper <br/>Turbo Vacuum</h1>
+  </div>
+</div>
+<!-- / component/block/heading/heading.hbs -->
+    
+<!-- partial: component/block/gallery/gallery.hbs -->
+<div class="gallery" data-component="gallery">
+  <amp-state id="imageGalleryState">
+    <script type="application/json">
+      {
+        "selectedSlide": 0
+      }
+    </script>
+  </amp-state>
+  
+<!-- partial: component/general/block-title/block-title.hbs -->
+<div class="block-title" data-component="block-title">
+  <h2 class="heading-03">Let’s Help You Set it Up</h2>
+</div>
+<!-- / component/general/block-title/block-title.hbs -->
+  <div class="wrapper">
+    <div class="gallery-top">
+      <amp-carousel
+        controls
+        type="slides"
+        width="372"
+        height="209"
+        layout="responsive"
+        [slide]="imageGalleryState.selectedSlide"
+        on="slideChange:AMP.setState({ imageGalleryState: { selectedSlide: event.index } })">
+            <figure>
+              <amp-img
+                lightbox="gallery-"
+                src="assets/template-howto/images/gallery/gallery-image-slide-1.jpg"
+                width="372"
+                height="209"
+                layout="responsive"
+                alt="">
+              </amp-img>
+              <figcaption>
+                  <p class="copy-01">Combine the cleaner head with the machine</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <amp-img
+                lightbox="gallery-"
+                src="assets/template-howto/images/gallery/gallery-image-slide-1.jpg"
+                width="372"
+                height="209"
+                layout="responsive"
+                alt="">
+              </amp-img>
+              <figcaption>
+                  <p class="copy-01">Combine the cleaner head with the machine</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <amp-img
+                lightbox="gallery-"
+                src="assets/template-howto/images/gallery/gallery-image-slide-1.jpg"
+                width="372"
+                height="209"
+                layout="responsive"
+                alt="">
+              </amp-img>
+              <figcaption>
+                  <p class="copy-01">Combine the cleaner head with the machine</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <amp-img
+                lightbox="gallery-"
+                src="assets/template-howto/images/gallery/gallery-image-slide-1.jpg"
+                width="372"
+                height="209"
+                layout="responsive"
+                alt="">
+              </amp-img>
+              <figcaption>
+                  <p class="copy-01">Combine the cleaner head with the machine</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <amp-img
+                lightbox="gallery-"
+                src="assets/template-howto/images/gallery/gallery-image-slide-1.jpg"
+                width="372"
+                height="209"
+                layout="responsive"
+                alt="">
+              </amp-img>
+              <figcaption>
+                  <p class="copy-01">Combine the cleaner head with the machine</p>
+              </figcaption>
+            </figure>
+      </amp-carousel>
+      <amp-selector
+        layout="container"
+        name="carousel-selector"
+        class="bullets"
+        [selected]="imageGalleryState.selectedSlide"
+        on="select:AMP.setState({ imageGalleryState: { selectedSlide: event.targetOption } })">
+        <amp-carousel controls layout="fixed-height" height="10">
+            <button option="0"  selected>0</button>
+            <button option="1"  >1</button>
+            <button option="2"  >2</button>
+            <button option="3"  >3</button>
+            <button option="4"  >4</button>
+        </amp-carousel>
+      </amp-selector>
+    </div>
+    <div class="gallery-bottom padding-right">
+        <div
+          class="description"
+          data-index="0"
+          [hidden]="imageGalleryState.selectedSlide != 0"
+          >
+            <p class="index">1</p>
+          <div class="copy">
+              <p class="copy-01">Combine the cleaner head with the machine</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="1"
+          [hidden]="imageGalleryState.selectedSlide != 1"
+          hidden>
+            <p class="index">2</p>
+          <div class="copy">
+              <p class="copy-01">Combine the cleaner head with the machine</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="2"
+          [hidden]="imageGalleryState.selectedSlide != 2"
+          hidden>
+            <p class="index">3</p>
+          <div class="copy">
+              <p class="copy-01">Combine the cleaner head with the machine</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="3"
+          [hidden]="imageGalleryState.selectedSlide != 3"
+          hidden>
+            <p class="index">4</p>
+          <div class="copy">
+              <p class="copy-01">Combine the cleaner head with the machine</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="4"
+          [hidden]="imageGalleryState.selectedSlide != 4"
+          hidden>
+            <p class="index">5</p>
+          <div class="copy">
+              <p class="copy-01">Combine the cleaner head with the machine</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- / component/block/gallery/gallery.hbs -->
+    
+<!-- partial: component/block/full-product-guide/full-product-guide.hbs -->
+<div class="full-product-guide" data-component="full-product-guide">
+  <div class="wrapper">
+    <button class="product-guide-button" on="tap:notify-me" role="button" tabindex="0">
+      <span class="button-inner">
+        See full product guide
+      </span>
+    </button>
+  </div>
+  <amp-lightbox id="notify-me" layout="nodisplay" class="lightbox" animate-in="fly-in-bottom" scrollable="true">
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <button class="close-button" on="tap:notify-me.close" role="button" tabindex="0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18">
+            <g id="PRODUCTHOWTO:-Exit-button" fill="none" fill-rule="nonzero" stroke="#D4D2D7" stroke-linecap="square" stroke-width="3">
+              <path id="Line-2-Copy" d="M.5.5l18.5 17"/>
+              <path id="Line-2-Copy-2" d="M.5.5l18.5 17" transform="matrix(-1 0 0 1 19 0)"/>
+            </g>
+          </svg>
+        </button>
+        <h2 class="heading-01 title">Full Product Guide </h2>
+          <p class="copy-01 copy">Morbi vitae dolor ac tellus porttitor dapibus. Aenean pretium malesuada purus nec placerat. Praesent hendrerit nisi a consequat condimentum. Cras sit amet tellus vitae nulla laoreet scelerisque sit amet eu est. Pellentesque sollicitudin nunc pellentesque venenatis blandit. Sed et libero magna. Donec sit amet quam nec mauris vestibulum vestibulum eu sit amet mauris. Nunc a dapibus magna.</p>
+          <p class="copy-01 copy">Fusce a mollis justo. Phasellus scelerisque augue ligula, vitae commodo neque varius non. Integer ultrices ultrices lectus vel aliquam. Fusce aliquam ligula ipsum, eu dapibus nulla rutrum condimentum. Suspendisse risus dui, porta ut convallis a, maximus eu urna. In malesuada tellus et vulputate cursus. Ut neque dolor, ullamcorper vitae condimentum et, vestibulum eget libero. Mauris facilisis velit quis cursus euismod. Fusce eu lacus finibus, dictum erat in, ullamcorper ante. Donec rutrum eleifend tellus non maximus. Proin at odio vel ligula auctor aliquam vel sit amet tellus. Duis vulputate lectus in erat elementum, vel rhoncus est dapibus. Vivamus convallis, augue id pulvinar gravida, lacus dolor suscipit odio, in tempus est ipsum at ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+          <p class="copy-01 copy">Quisque maximus lectus ut pulvinar congue. Donec non consectetur est, in mattis mauris. Nullam pretium efficitur nisi. Pellentesque sed dictum risus, at malesuada elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris viverra commodo tincidunt. Fusce viverra lorem quis scelerisque gravida. Cras pretium semper lacus. Praesent vel velit interdum ipsum faucibus consectetur. Suspendisse elementum, lorem id feugiat ultricies, lorem lacus pulvinar felis, quis sodales metus risus vitae quam. Pellentesque sit amet porttitor nibh. Maecenas enim dui, iaculis sit amet metus eget, posuere aliquam mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ultrices lacinia sem, quis tincidunt sapien iaculis nec. Aenean nec elit vel purus porta sodales.</p>
+          <p class="copy-01 copy">Morbi vitae dolor ac tellus porttitor dapibus. Aenean pretium malesuada purus nec placerat. Praesent hendrerit nisi a consequat condimentum. Cras sit amet tellus vitae nulla laoreet scelerisque sit amet eu est. Pellentesque sollicitudin nunc pellentesque venenatis blandit. Sed et libero magna. Donec sit amet quam nec mauris vestibulum vestibulum eu sit amet mauris. Nunc a dapibus magna.</p>
+          <p class="copy-01 copy">Fusce a mollis justo. Phasellus scelerisque augue ligula, vitae commodo neque varius non. Integer ultrices ultrices lectus vel aliquam. Fusce aliquam ligula ipsum, eu dapibus nulla rutrum condimentum. Suspendisse risus dui, porta ut convallis a, maximus eu urna. In malesuada tellus et vulputate cursus. Ut neque dolor, ullamcorper vitae condimentum et, vestibulum eget libero. Mauris facilisis velit quis cursus euismod. Fusce eu lacus finibus, dictum erat in, ullamcorper ante. Donec rutrum eleifend tellus non maximus. Proin at odio vel ligula auctor aliquam vel sit amet tellus. Duis vulputate lectus in erat elementum, vel rhoncus est dapibus. Vivamus convallis, augue id pulvinar gravida, lacus dolor suscipit odio, in tempus est ipsum at ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+          <p class="copy-01 copy">Quisque maximus lectus ut pulvinar congue. Donec non consectetur est, in mattis mauris. Nullam pretium efficitur nisi. Pellentesque sed dictum risus, at malesuada elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris viverra commodo tincidunt. Fusce viverra lorem quis scelerisque gravida. Cras pretium semper lacus. Praesent vel velit interdum ipsum faucibus consectetur. Suspendisse elementum, lorem id feugiat ultricies, lorem lacus pulvinar felis, quis sodales metus risus vitae quam. Pellentesque sit amet porttitor nibh. Maecenas enim dui, iaculis sit amet metus eget, posuere aliquam mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ultrices lacinia sem, quis tincidunt sapien iaculis nec. Aenean nec elit vel purus porta sodales.</p>
+        &nbsp;
+      </div>
+    </div>
+  </amp-lightbox>
+</div>
+<!-- / component/block/full-product-guide/full-product-guide.hbs -->
+    
+<!-- partial: component/block/hotspot/hotspot.hbs -->
+<div class="hotspot" data-component="hotspot">
+  <amp-state id="hotspotData">
+    <script type="application/json">
+      {
+        "activeHotspot": 0,
+        "hotspots": [
+            {
+              "title": "Tangle Free Turbine Tool",
+              "copy": "Tool that easily removes dirt and hair from upholstery, stairs and car interiors."
+            },
+            {
+              "title": "Alternate heading",
+              "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi risus nisl, tempus vel laoreet at, placerat non nunc. Proin pretium ultrices tortor sed tincidunt. Phasellus pulvinar posuere mi, at laoreet arcu pellentesque sit amet. Aenean eget mi quis libero tincidunt pretium eu ut elit. Mauris sed vestibulum nibh."
+            },
+            {
+              "title": "Alternate heading",
+              "copy": "Morbi id lacus consequat, mattis turpis at, scelerisque tellus. Duis semper nisi a leo dapibus consectetur. Sed libero leo, pretium vel arcu auctor, commodo ultricies quam. Nullam ac porttitor elit, mollis egestas magna. Curabitur nec mauris at neque ultrices venenatis. Quisque faucibus sodales leo, et porta sem maximus nec. Donec consectetur lacus quis facilisis facilisis."
+            },
+            {
+              "title": "Alternate heading",
+              "copy": "Nulla sed finibus odio. Proin sollicitudin fermentum justo sed maximus. Praesent mauris odio, vehicula non placerat a, molestie rhoncus libero. Proin auctor odio maximus, euismod dui pulvinar, aliquet enim. Mauris euismod dui vitae orci iaculis, sed tempor mi ornare."
+            },
+            {
+              "title": "Alternate heading",
+              "copy": "Mauris imperdiet, quam at volutpat vehicula, augue tellus venenatis lectus, non porta massa arcu ac dui. Nunc tincidunt dolor urna, in elementum ligula egestas sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu justo, pretium lobortis convallis in, porttitor vitae enim."
+            },
+            {
+              "title": "Alternate heading",
+              "copy": "Cras consectetur vulputate orci, malesuada dapibus justo. Etiam sit amet lacinia ipsum. In hendrerit dolor eros, et vehicula libero bibendum quis. Cras nec iaculis mauris. Vivamus non condimentum nulla. Fusce semper felis ac dignissim lobortis. Sed tincidunt sem neque, sed ultrices mi porttitor at."
+            }
+        ]
+      }
+    </script>
+  </amp-state>
+  
+<!-- partial: component/general/block-title/block-title.hbs -->
+<div class="block-title" data-component="block-title">
+  <h2 class="heading-03">Learn What It Can Do </h2>
+</div>
+<!-- / component/general/block-title/block-title.hbs -->
+  <div class="wrapper">
+    <div class="inner-wrapper">
+      <div class="hotspot-wrapper">
+        <amp-img
+          src="assets/template-howto/images/hotspot/hotspot-product-base.png"
+          width="279"
+          height="268"
+          layout="responsive"
+          alt="">
+        </amp-img>
+        <amp-selector
+          class="hotspots"
+          [selected]="hotspotData.activeHotspot"
+          on="select:AMP.setState({ hotspotData: { activeHotspot: event.targetOption } })" >
+            <button
+              option="0"
+              class="hotspot"
+              selected
+              style="left: 10%; top: 75%">
+              <span class="circle">0</span>
+            </button>
+            <button
+              option="1"
+              class="hotspot"
+              
+              style="left: 32%; top: 60%">
+              <span class="circle">1</span>
+            </button>
+            <button
+              option="2"
+              class="hotspot"
+              
+              style="left: 69%; top: 6%">
+              <span class="circle">2</span>
+            </button>
+            <button
+              option="3"
+              class="hotspot"
+              
+              style="left: 83%; top: 5%">
+              <span class="circle">3</span>
+            </button>
+            <button
+              option="4"
+              class="hotspot"
+              
+              style="left: 81%; top: 65%">
+              <span class="circle">4</span>
+            </button>
+            <button
+              option="5"
+              class="hotspot"
+              
+              style="left: 45%; top: 85%">
+              <span class="circle">5</span>
+            </button>
+        </amp-selector>
+      </div>
+    </div>
+    <div class="hotspot-description" [hidden]="hotspotData.activeHotspot == 'null'">
+      <div class="hotspot-inner">
+        <h2 class="heading-03 title" [text]="hotspotData.hotspots[hotspotData.activeHotspot].title">
+          Tangle Free Turbine Tool
+        </h2>
+        <p class="copy-01" [text]="hotspotData.hotspots[hotspotData.activeHotspot].copy">
+          Tool that easily removes dirt and hair from upholstery, stairs and car interiors.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / component/block/hotspot/hotspot.hbs -->
+    
+<!-- partial: component/block/gallery/gallery.hbs -->
+<div class="gallery" data-component="gallery">
+  <amp-state id="videoGalleryState">
+    <script type="application/json">
+      {
+        "selectedSlide": 0
+      }
+    </script>
+  </amp-state>
+  
+<!-- partial: component/general/block-title/block-title.hbs -->
+<div class="block-title" data-component="block-title">
+  <h2 class="heading-03">Special Care Tips</h2>
+</div>
+<!-- / component/general/block-title/block-title.hbs -->
+  <div class="wrapper">
+    <div class="gallery-top">
+      <amp-carousel
+        controls
+        type="slides"
+        width="372"
+        height="209"
+        layout="responsive"
+        [slide]="videoGalleryState.selectedSlide"
+        on="slideChange:AMP.setState({ videoGalleryState: { selectedSlide: event.index } })">
+            
+<!-- partial: component/video-player/video-player.hbs -->
+<div class="video-player" data-component="video-player">
+  <amp-video
+    id="video-gallery-video0"
+    src="assets/template-howto/videos/dummy-video.mp4"
+    poster="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"
+    width="412"
+    height="234"
+    layout="responsive"
+    controls>
+  </amp-video>
+
+  <div id="video-overlay-gallery-video0" class="video-overlay">
+    <amp-img class="poster-image"  width="412" height="234" layout="responsive" src="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"></amp-img>
+    <button
+      class="abs-center play-button"
+      role="button"
+      tabindex="0"
+      on="tap:video-overlay-gallery-video0.hide, video-gallery-video0.play">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+        <defs>
+          <path id="path-1" d="M12.5 4L28 28H-3z"/>
+          <filter id="filter-2" width="132.3%" height="141.7%" x="-16.1%" y="-16.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.267617985 0 0 0 0 0.237814017 0 0 0 0 0.237814017 0 0 0 0.2 0"/>
+          </filter>
+        </defs>
+        <g id="Symbols" fill="none" fill-rule="evenodd">
+          <g id="producthowto:play-button" fill-rule="nonzero" transform="translate(1 1)">
+            <g id="Group">
+              <circle id="Oval" cx="29" cy="29" r="29" fill="#555" fill-opacity=".32300158" stroke="#FFF"/>
+              <g id="play_icon-copy-4" transform="translate(20 13)">
+                <g id="Triangle-Copy" transform="matrix(0 -1 -1 0 28.5 28.5)">
+                  <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1"/>
+                  <use fill="#E9E9E9" xlink:href="#path-1"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+</div>
+<!-- / component/video-player/video-player.hbs -->
+                      
+<!-- partial: component/video-player/video-player.hbs -->
+<div class="video-player" data-component="video-player">
+  <amp-video
+    id="video-gallery-video1"
+    src="assets/template-howto/videos/dummy-video.mp4"
+    poster="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"
+    width="412"
+    height="234"
+    layout="responsive"
+    controls>
+  </amp-video>
+
+  <div id="video-overlay-gallery-video1" class="video-overlay">
+    <amp-img class="poster-image"  width="412" height="234" layout="responsive" src="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"></amp-img>
+    <button
+      class="abs-center play-button"
+      role="button"
+      tabindex="0"
+      on="tap:video-overlay-gallery-video1.hide, video-gallery-video1.play">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+        <defs>
+          <path id="path-1" d="M12.5 4L28 28H-3z"/>
+          <filter id="filter-2" width="132.3%" height="141.7%" x="-16.1%" y="-16.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.267617985 0 0 0 0 0.237814017 0 0 0 0 0.237814017 0 0 0 0.2 0"/>
+          </filter>
+        </defs>
+        <g id="Symbols" fill="none" fill-rule="evenodd">
+          <g id="producthowto:play-button" fill-rule="nonzero" transform="translate(1 1)">
+            <g id="Group">
+              <circle id="Oval" cx="29" cy="29" r="29" fill="#555" fill-opacity=".32300158" stroke="#FFF"/>
+              <g id="play_icon-copy-4" transform="translate(20 13)">
+                <g id="Triangle-Copy" transform="matrix(0 -1 -1 0 28.5 28.5)">
+                  <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1"/>
+                  <use fill="#E9E9E9" xlink:href="#path-1"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+</div>
+<!-- / component/video-player/video-player.hbs -->
+                      
+<!-- partial: component/video-player/video-player.hbs -->
+<div class="video-player" data-component="video-player">
+  <amp-video
+    id="video-gallery-video2"
+    src="assets/template-howto/videos/dummy-video.mp4"
+    poster="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"
+    width="412"
+    height="234"
+    layout="responsive"
+    controls>
+  </amp-video>
+
+  <div id="video-overlay-gallery-video2" class="video-overlay">
+    <amp-img class="poster-image"  width="412" height="234" layout="responsive" src="assets/template-howto/images/gallery/gallery-video-slide-1.jpg"></amp-img>
+    <button
+      class="abs-center play-button"
+      role="button"
+      tabindex="0"
+      on="tap:video-overlay-gallery-video2.hide, video-gallery-video2.play">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+        <defs>
+          <path id="path-1" d="M12.5 4L28 28H-3z"/>
+          <filter id="filter-2" width="132.3%" height="141.7%" x="-16.1%" y="-16.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.267617985 0 0 0 0 0.237814017 0 0 0 0 0.237814017 0 0 0 0.2 0"/>
+          </filter>
+        </defs>
+        <g id="Symbols" fill="none" fill-rule="evenodd">
+          <g id="producthowto:play-button" fill-rule="nonzero" transform="translate(1 1)">
+            <g id="Group">
+              <circle id="Oval" cx="29" cy="29" r="29" fill="#555" fill-opacity=".32300158" stroke="#FFF"/>
+              <g id="play_icon-copy-4" transform="translate(20 13)">
+                <g id="Triangle-Copy" transform="matrix(0 -1 -1 0 28.5 28.5)">
+                  <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1"/>
+                  <use fill="#E9E9E9" xlink:href="#path-1"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+</div>
+<!-- / component/video-player/video-player.hbs -->
+                </amp-carousel>
+      <amp-selector
+        layout="container"
+        name="carousel-selector"
+        class="bullets"
+        [selected]="videoGalleryState.selectedSlide"
+        on="select:AMP.setState({ videoGalleryState: { selectedSlide: event.targetOption } })">
+        <amp-carousel controls layout="fixed-height" height="10">
+            <button option="0"  selected>0</button>
+            <button option="1"  >1</button>
+            <button option="2"  >2</button>
+        </amp-carousel>
+      </amp-selector>
+    </div>
+    <div class="gallery-bottom ">
+        <div
+          class="description"
+          data-index="0"
+          [hidden]="videoGalleryState.selectedSlide != 0"
+          >
+          <div class="copy">
+              <h3 class="heading-03 title">Cleaning Procedure</h3>
+              <p class="copy-01">Learn the proper way to clean your vacuum every few months.</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="1"
+          [hidden]="videoGalleryState.selectedSlide != 1"
+          hidden>
+          <div class="copy">
+              <h3 class="heading-03 title">Lorem ipsum dolor sit amet</h3>
+              <p class="copy-01">Phasellus sodales id urna nec consequat. Donec ac semper leo. Curabitur imperdiet felis dictum condimentum dictum. Donec ac ultrices erat.</p>
+          </div>
+        </div>
+        <div
+          class="description"
+          data-index="2"
+          [hidden]="videoGalleryState.selectedSlide != 2"
+          hidden>
+          <div class="copy">
+              <h3 class="heading-03 title">Duis sodales molestie ipsum.</h3>
+              <p class="copy-01">Sed ultricies lectus egestas mauris interdum, aliquet laoreet lectus aliquam. Donec lacinia in nibh non interdum.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- / component/block/gallery/gallery.hbs -->
+    
+<!-- partial: component/block/accordion/accordion.hbs -->
+<div class="accordion" data-component="accordion">
+  <amp-accordion>
+      <section>
+        <header class="toggle">
+          <h4 class="heading-03">Return &amp; Warranty</h4>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+            <g id="Editorial/Unlock-" fill="none" fill-rule="evenodd">
+              <g id="How-to-Product" fill="#4A4A4A" transform="translate(-352 -1889)">
+                <g id="Expanded-Content" transform="translate(20 1886)">
+                  <g id="Group-10" transform="translate(332 3)">
+                    <path id="Rectangle-Copy-5" d="M7.11538462 0h1.23076923v14.7692308H7.11538462z"/>
+                    <path id="Rectangle-Copy-17" d="M6.88461538.23076923h1.23076924V15H6.88461538z" transform="rotate(90 7.5 7.615385)"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </header>
+        <div>
+            
+<!-- partial: component/block/wysiwyg/wysiwyg.hbs -->
+<div class="wysiwyg" data-component="wysiwyg">
+  <div class="wrapper">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim bibendum leo. In cursus maximus arcu vitae pellentesque. Pellentesque quam erat, dapibus maximus tincidunt non, eleifend at purus. Cras imperdiet dui in risus finibus, euismod dignissim magna pulvinar. Aliquam nec condimentum dui. Quisque lobortis et lacus id mattis. Ut justo ligula, ullamcorper non hendrerit et, blandit quis est. Nunc luctus pretium orci, sed sodales leo fermentum in. Integer ac consequat enim. Nam mattis quam velit, nec hendrerit felis vulputate eu. Nullam sit amet quam malesuada, porttitor nulla sed, faucibus tellus. Phasellus scelerisque dapibus tortor, sit amet lobortis erat venenatis id. Curabitur sapien mauris, finibus et blandit ut, scelerisque sit amet nunc.</p><p>Phasellus sodales id urna nec consequat. Donec ac semper leo. Curabitur imperdiet felis dictum condimentum dictum. Donec ac ultrices erat. Suspendisse vel egestas augue, eu interdum orci. Curabitur consequat rhoncus aliquet. Sed ac pharetra turpis. Nam sed semper lectus, eget laoreet augue. In sed commodo dui, in efficitur sapien. Nulla facilisi.</p>
+  </div>
+</div>
+<!-- / component/block/wysiwyg/wysiwyg.hbs -->
+        </div>
+      </section>
+      <section>
+        <header class="toggle">
+          <h4 class="heading-03">General &amp; Faqs</h4>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+            <g id="Editorial/Unlock-" fill="none" fill-rule="evenodd">
+              <g id="How-to-Product" fill="#4A4A4A" transform="translate(-352 -1889)">
+                <g id="Expanded-Content" transform="translate(20 1886)">
+                  <g id="Group-10" transform="translate(332 3)">
+                    <path id="Rectangle-Copy-5" d="M7.11538462 0h1.23076923v14.7692308H7.11538462z"/>
+                    <path id="Rectangle-Copy-17" d="M6.88461538.23076923h1.23076924V15H6.88461538z" transform="rotate(90 7.5 7.615385)"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </header>
+        <div>
+            
+<!-- partial: component/block/wysiwyg/wysiwyg.hbs -->
+<div class="wysiwyg" data-component="wysiwyg">
+  <div class="wrapper">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim bibendum leo. In cursus maximus arcu vitae pellentesque. Pellentesque quam erat, dapibus maximus tincidunt non, eleifend at purus. Cras imperdiet dui in risus finibus, euismod dignissim magna pulvinar. Aliquam nec condimentum dui. Quisque lobortis et lacus id mattis. Ut justo ligula, ullamcorper non hendrerit et, blandit quis est. Nunc luctus pretium orci, sed sodales leo fermentum in. Integer ac consequat enim. Nam mattis quam velit, nec hendrerit felis vulputate eu. Nullam sit amet quam malesuada, porttitor nulla sed, faucibus tellus. Phasellus scelerisque dapibus tortor, sit amet lobortis erat venenatis id. Curabitur sapien mauris, finibus et blandit ut, scelerisque sit amet nunc.</p><p>Phasellus sodales id urna nec consequat. Donec ac semper leo. Curabitur imperdiet felis dictum condimentum dictum. Donec ac ultrices erat. Suspendisse vel egestas augue, eu interdum orci. Curabitur consequat rhoncus aliquet. Sed ac pharetra turpis. Nam sed semper lectus, eget laoreet augue. In sed commodo dui, in efficitur sapien. Nulla facilisi.</p>
+  </div>
+</div>
+<!-- / component/block/wysiwyg/wysiwyg.hbs -->
+        </div>
+      </section>
+  </amp-accordion>
+</div>
+<!-- / component/block/accordion/accordion.hbs -->
+    
+<!-- partial: component/block/form/form.hbs -->
+<div class="form" data-component="form">
+  <div class="wrapper">
+    <h1 class="heading-02 title">Was this helpful?</h1>
+    <form method="get" target="_top" action="#" custom-validation-reporting="show-all-on-submit">
+      <div class="row large-spacing">
+        
+<!-- partial: component/general/form/custom-radio/custom-radio.hbs -->
+<div class="custom-radio" data-component="custom-radio">
+  <amp-selector
+    name="size"
+    layout="container"
+    [selected]="product.selectedSize"
+    on="select:AMP.setState({
+      product: {
+        selectedSize: event.targetOption,
+      }
+    })">
+      <div class="copy-02 radio" option="yes">
+        <strong>Yes</strong>
+      </div>
+      <div class="copy-02 radio" option="no">
+        <strong>No</strong>
+      </div>
+  </amp-selector>
+</div>
+<!-- / component/general/form/custom-radio/custom-radio.hbs -->
+      </div>
+      <div class="row small-spacing">
+        <input required type="email" id="email" name="email" placeholder="Email Address">
+        <p class="copy-02" visible-when-invalid="valueMissing" validation-for="email"></p>
+        <p class="copy-02" visible-when-invalid="typeMismatch" validation-for="email"></p>
+      </div>
+      <div class="row large-spacing">
+        <textarea required  id="Message" name="Message" placeholder="Let us know how we can improve your experience "></textarea>
+        <p class="copy-02" visible-when-invalid="valueMissing" validation-for="Message"></p>
+      </div>
+      <button class="primary-button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- / component/block/form/form.hbs -->
+</div>
+<!-- / component/layout/app/app.hbs -->
+
+  </div>
+</body>
+</html>

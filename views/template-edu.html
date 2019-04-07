@@ -1,0 +1,529 @@
+<!--
+  Copyright 2019 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+<html amp lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-3d-gltf" src="https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+
+    <title>Mars | Guide to the Solar System</title>
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Mars photos, stats and characteristics.">
+    <meta name="application-name" content="Guide to the Solar System">
+    <meta property="og:image" content="assets/template-edu/mars.jpg">
+    <meta property="og:image:width" content="1500">
+    <meta property="og:image:height" content="1500">
+
+    <link rel="icon" type="image/png" href="assets/template-edu/icon.png" sizes="32x32">
+    <link rel="canonical" href="https://lens-templates.firebaseapp.com/template-edu.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:400,700">
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.googleapis.com/",
+      "@type": "ARArtifact",
+      "arTarget": {
+        "@type": "ARImageTarget",
+        "name" : "Mars",
+        "description" : "Planet",
+        "image": "https://lens-templates.firebaseapp.com/assets/template-edu/mars.jpg"
+      },
+      "arContent": {
+        "@type": "WebPage",
+        "name": "Explore Mars: The Red Planet",
+        "description": "Mars photos, stats and characteristics.",
+        "image": "https://lens-templates.firebaseapp.com/assets/template-edu/mars.jpg",
+        "url": "https://lens-templates.firebaseapp.com/template-edu.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Guide to the Solar System",
+          "logo": "https://lens-templates.firebaseapp.com/assets/template-edu/icon.png"
+        }
+      }
+    }
+    </script>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <style amp-custom>
+      /* General styling */
+      body {
+        color: #A9A9A9;
+        background-color: #1F1F1F;
+        font-family: 'Karla', sans-serif;
+        line-height: 1.3;
+        font-weight: 400;
+        font-size: 15px;
+      }
+      section {
+        padding: 45px 20px;
+        margin: 0 auto;
+      }
+      main > section.no-bottom-padding {
+        padding-bottom: 0;
+      }
+      main > section > *:first-child {
+        padding-top: 0;
+        margin-top: 0;
+      }
+      section > *:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      ul.styled {
+        margin: 35px 0;
+        padding: 0 0 0 17px;
+      }
+      ul.styled span {
+        color: #DCDCDC;
+        font-weight: 700;
+        padding-left: 5px;
+      }
+      b, strong {
+        font-weight: 700;
+        color: #DCDCDC;
+      }
+      p {
+        margin: 0 0 35px;
+      }
+      h1 {
+        font-size: 90px;
+        color: #fff;
+      }
+      h2 {
+        margin: 0;
+      }
+      h2.styled {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        color: #DCDCDC;
+      }
+      h3 {
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #DCDCDC;
+        margin: 0 0 2px;
+      }
+      h2,
+      nav.main a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        color: #DCDCDC;
+        text-decoration: none;
+        position: relative;
+      }
+      nav.main li {
+        position: relative;
+      }
+      h2.styled:after,
+      nav.main li:after {
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        background-color: #D5653A;
+      }
+      nav.main li:after {
+        left: 20px;
+      }
+      nav.main ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      nav.main li {
+        padding: 20px;
+      }
+      .background-gray {
+        background-color: #1F1F1F;
+      }
+      .background-black {
+        background-color: #161616;
+      }
+      .container {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+      }
+      main section {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .footnote {
+        margin: 0;
+        color: #666;
+      }
+      .no-highlight {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+      }
+      .no-highlight:focus {
+        outline: none;
+      }
+
+      /* Header */
+      header.main {
+        height: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        background-color: #161616;
+      }
+      header.main .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+      #logo {
+        display: block;
+        height: 18px;
+      }
+
+      /* Hero section */
+      #hero {
+        height: 360px;
+        max-height: 65vh;
+        overflow: hidden;
+        position: relative;
+        padding-top: 20px;
+      }
+      #hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0 30px;
+        text-align: center;
+        line-height: 1.8;
+        letter-spacing: 2px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+        pointer-events: none;
+        z-index: 3;
+      }
+      #mars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        transform: translateX(-25%);
+        z-index: 2;
+      }
+      #mars-placeholder{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Accordion */
+      amp-accordion {
+        width: 100vw;
+        margin-left: -40px;
+      }
+      amp-accordion section {
+        padding: 15px 55px 15px 40px;
+        border-top: 1px solid #4D4D4D;
+      }
+      amp-accordion section div {
+        padding-left: 50px;
+      }
+      amp-accordion section h3[role="button"] {
+        border: none;
+        background-color: transparent;
+        position: relative;
+        padding: 12px 30px 12px 50px;
+      }
+      amp-accordion section h3 > span {
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #4D4D4D;
+        right: 0;
+        top: 11px;
+        border-radius: 50%;
+        transition: .3s transform ease-in-out;
+      }
+      amp-accordion section h3 > span:before,
+      amp-accordion section h3 > span:after {
+        width: 10px;
+        height: 1px;
+        background-color: #4D4D4D;
+        position: absolute;
+        content: "";
+        left: 4px;
+        top: 8px;
+      }
+      amp-accordion section h3 > span:after {
+        transform: rotate(90deg);
+      }
+      amp-accordion section[expanded] h3 > span {
+        transform: rotate(45deg);
+        border-color: #fff;
+      }
+      amp-accordion section[expanded] h3 > span:before,
+      amp-accordion section[expanded] h3 > span:after {
+        background-color: #fff;
+      }
+      amp-accordion section:nth-child(1) h3 {
+        background: url(assets/template-edu/icon-1.svg) no-repeat left center/30px;
+      }
+      amp-accordion section:nth-child(2) h3 {
+        background: url(assets/template-edu/icon-2.svg) no-repeat left center/38px;
+      }
+      amp-accordion section:nth-child(3) h3 {
+        background: url(assets/template-edu/icon-3.svg) no-repeat left center/36px;
+      }
+      amp-accordion section:nth-child(4) h3 {
+        background: url(assets/template-edu/icon-4.svg) no-repeat left bottom 10px/36px;
+      }
+      amp-accordion section h3:focus {
+        outline: none;
+      }
+      amp-accordion section div > *:last-child {
+        margin-bottom: 5px;
+        padding-bottom: 0;
+      }
+
+      /* Photo grid */
+      #photo-grid {
+        margin-bottom: 40px;
+        display: grid;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        grid-template-columns: repeat(3, 4fr);
+      }
+      #photo-grid amp-img:after {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        background: url(assets/template-edu/frame.svg) no-repeat center center/100%;
+      }
+      #photo-grid amp-img:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end:   3;
+      }
+      #photo-grid amp-img:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end:   4;
+      }
+      #photo-grid amp-img:nth-child(3) {
+        grid-column-start: 2;
+        grid-column-end:   4;
+      }
+      #photo-grid amp-img:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end:   3;
+      }
+
+      /* Carousel */
+      #slider {
+        width: 100vw;
+        margin: 20px 0 20px -40px
+      }
+      #slider > div {
+        vertical-align: top;
+      }
+      #slider .amp-scrollable-carousel-slide {
+        margin-left: 12px;
+      }
+      #slider .amp-scrollable-carousel-slide:first-child {
+        margin-left: 40px;
+      }
+      #slider .amp-scrollable-carousel-slide:last-child {
+        margin-right: 40px;
+      }
+      #slider .amp-carousel-button {
+        display: none;
+      }
+      .box {
+        background-color: #161616;
+        width: 230px;
+        height: 260px;
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+        vertical-align: top;
+      }
+      .box .content {
+        padding: 15px;
+        box-sizing: border-box;
+        height: 110px;
+        overflow: hidden;
+        white-space: normal;
+        color: #DCDCDC;
+      }
+      .box .content p {
+        color: #A9A9A9;
+        margin-bottom: 0;
+      }
+      .box .content h3 {
+        margin-bottom: 10px;
+      }
+
+      @media all and (min-width: 640px) {
+        amp-accordion {
+            width: 100%;
+            margin-left: 0;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <header class="main">
+      <div class="container">
+        <a id="logo" href="">
+          <amp-img src="assets/template-edu/guide-to-the-solar-system.svg" width="178" height="18"  alt="Guide to the Solar System"></amp-img>
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="hero" class="background-black">
+        <div class="container">
+          <h1>
+            <amp-img src="assets/template-edu/mars.svg" width="188" height="60" alt="Mars"></amp-img><br>
+            Red Planet
+          </h1>
+          <amp-3d-gltf id="mars" layout="responsive" width="320" height="700" alpha="true" autoRotate="true" enableZoom="false" src="assets/template-edu/mars.glb"></amp-3d-gltf>
+          <amp-img id="mars-placeholder" src="assets/template-edu/mars-placeholder.jpg" layout="fixed" width="570" height="288" alt=""></amp-img>
+        </div>
+      </section>
+
+      <section class="background-gray no-bottom-padding">
+        <div class="container">
+          <h2 class="styled">Fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury.</h2>
+          <p>Mars is one of the four inner — or terrestrial — planets. These planets are composed primarily of silicate rock and metals and have solid surfaces.</p>
+          <ul class="styled">
+            <li>Equatorial diameter: <span>6,792 km</span></li>
+            <li>Mass: <span>6.42 x 10^23 kg</span></li>
+            <li>Moons: <span>Phobos and Deimos</span></li>
+            <li>Orbit period: <span>687 days (1.9 years)</span></li>
+            <li>First recorded: <span>2nd millennium BC</span></li>
+            <li>Atmosphere: <span>Mostly carbon dioxide</span></li>
+          </ul>
+          <amp-accordion animate>
+            <section expanded>
+              <h3 class="no-highlight">Red Planet<span></span></h3>
+              <div>
+                <p>The reddish brown appearance gives Mars its nickname "Red Planet," which also hearkens to the planet's true namesake, the Roman god of war, with the color reminiscent of blood.</p>
+              </div>
+            </section>
+            <section>
+              <h3 class="no-highlight">Largest dust storms<span></span></h3>
+              <div>
+                <p>Mars has been known to have planet-covering dust storms that last for months. This may be due to its extra elongated orbit generating extreme seasonal patterns.</p>
+              </div>
+            </section>
+            <section>
+              <h3 class="no-highlight">Competing with Saturn<span></span></h3>
+              <div>
+                <p>Mars' largest moon, Phobos, is estimated to be torn up in the next 20-40 million years, leaving Mars with a ring like Saturn.</p>
+              </div>
+            </section>
+            <section>
+              <h3 class="no-highlight">Highest mountain in the solar system<span></span></h3>
+              <div>
+                <p>Mars is home to the shield volcano Olympus Mons, which is 21km high, and may still be active.</p>
+              </div>
+            </section>
+          </amp-accordion>
+        </div>
+      </section>
+
+      <section class="background-black">
+        <div class="container align-center">
+          <h2>How big is Mars?</h2>
+          <p>Mars is 15% of the volume of Earth.</p>
+          <amp-img src="assets/template-edu/model.png" srcset="assets/template-edu/model@2x.png 2x" layout="responsive" width="247" height="243" alt="Mars"></amp-img>
+        </div>
+      </section>
+
+      <section class="background-gray">
+        <div class="container">
+          <h3>Related Images</h3>
+          <p>Tap thumbnails to expand.</p>
+          <div id="photo-grid">
+            <amp-img src="assets/template-edu/grid-1.jpg" width="378" height="862" layout="responsive" alt="Mars photo 1" lightbox></amp-img>
+            <amp-img src="assets/template-edu/grid-2.jpg" width="1066" height="544" layout="responsive" alt="Mars photo 2" lightbox></amp-img>
+            <amp-img src="assets/template-edu/grid-3.jpg" width="1066" height="544" layout="responsive" alt="Mars photo 3" lightbox></amp-img>
+            <amp-img src="assets/template-edu/grid-4.jpg" width="335" height="270" layout="responsive" alt="Mars photo 4"  lightbox></amp-img>
+            <amp-img src="assets/template-edu/grid-5.jpg" width="640" height="1040" layout="responsive" alt="Mars photo 5" lightbox></amp-img>
+          </div>
+          <h3>Other Planets</h3>
+          <amp-carousel id="slider" height="260" layout="fixed-height" type="carousel">
+            <a href="" class="box">
+              <amp-img src="assets/template-edu/saturn.jpg" srcset="assets/template-edu/saturn@2x.jpg 2x" width="230" height="150" layout="responsive" alt="Saturn"></amp-img>
+              <div class="content">
+                <h3>Saturn</h3>
+                <p>The sixth planet from the Sun and is the second-largest planet.</p>
+              </div>
+            </a>
+            <a href="" class="box">
+              <amp-img src="assets/template-edu/jupiter.jpg" srcset="assets/template-edu/jupiter@2x.jpg 2x" width="230" height="150" layout="responsive" alt="Jupiter"></amp-img>
+              <div class="content">
+                <h3>Jupiter</h3>
+                <p>The fifth planet from the Sun and is the largest planet.</p>
+              </div>
+            </a>
+          </amp-carousel>
+          <p class="footnote">Images courtesy of NASA</p>
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+
+</html>

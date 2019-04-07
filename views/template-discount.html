@@ -1,0 +1,1491 @@
+<!--
+  Copyright 2019 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+  <meta charSet="utf-8">
+  <title>Discount coupons - landing</title>
+  <link rel="canonical" href="https://lens-templates.firebaseapp.com/template-discount.html">
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html{
+  line-height:1.15;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%; }
+body{
+  margin:0; }
+article,aside,footer,header,nav,section{
+  display:block; }
+h1{
+  font-size:2em;
+  margin:.67em 0; }
+figcaption,figure,main{
+  display:block; }
+figure{
+  margin:1em 40px; }
+hr{
+  box-sizing:content-box;
+  height:0;
+  overflow:visible; }
+pre{
+  font-family:monospace,monospace;
+  font-size:1em; }
+a{
+  background-color:transparent;
+  -webkit-text-decoration-skip:objects; }
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline dotted; }
+b,strong{
+  font-weight:bolder; }
+code,kbd,samp{
+  font-family:monospace,monospace;
+  font-size:1em; }
+dfn{
+  font-style:italic; }
+mark{
+  background-color:#ff0;
+  color:#000; }
+small{
+  font-size:80%; }
+sub,sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline; }
+
+sub{
+  bottom:-.25em; }
+
+sup{
+  top:-.5em; }
+audio,video{
+  display:inline-block; }
+audio:not([controls]){
+  display:none;
+  height:0; }
+img{
+  border-style:none; }
+svg:not(:root){
+  overflow:hidden; }
+button,input,optgroup,select,textarea{
+  font-family:sans-serif;
+  font-size:100%;
+  line-height:1.15;
+  margin:0; }
+button,input{
+  overflow:visible; }
+button,select{
+  text-transform:none; }
+[type=reset],[type=submit],button,html [type=button]{
+  -webkit-appearance:button; }
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{
+  border-style:none;
+  padding:0; }
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{
+  outline:1px dotted ButtonText; }
+fieldset{
+  padding:.35em .75em .625em; }
+legend{
+  box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal; }
+progress{
+  display:inline-block;
+  vertical-align:baseline; }
+textarea{
+  overflow:auto; }
+[type=checkbox],[type=radio]{
+  box-sizing:border-box;
+  padding:0; }
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{
+  height:auto; }
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px; }
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none; }
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit; }
+details,menu{
+  display:block; }
+summary{
+  display:list-item; }
+canvas{
+  display:inline-block; }
+[hidden],template{
+  display:none; }
+@font-face{
+  font-family:Montserrat;
+  src:url(assets/template-discount/fonts/montserrat-regular-webfont.501ce09.woff2) format("woff2"), url(assets/template-discount/fonts/montserrat-regular-webfont.f29d2b8.woff) format("woff");
+  font-weight:400;
+  font-style:normal; }
+
+@font-face{
+  font-family:Montserrat;
+  src:url(assets/template-discount/fonts/montserrat-black-webfont.260c2ea.woff2) format("woff2"), url(assets/template-discount/fonts/montserrat-black-webfont.186cae8.woff) format("woff");
+  font-weight:900;
+}
+
+@font-face{
+  font-family:Montserrat;
+  src:url(assets/template-discount/fonts/montserrat-bold-webfont.79982cd.woff2) format("woff2"), url(assets/template-discount/fonts/montserrat-bold-webfont.957e93f.woff) format("woff");
+  font-weight:700;
+}
+
+@font-face{
+  font-family:Montserrat;
+  src:url(assets/template-discount/fonts/montserrat-semibold-webfont.15c24f7.woff2) format("woff2"), url(assets/template-discount/fonts/montserrat-semibold-webfont.f6dc609.woff) format("woff");
+  font-weight:600;
+  font-style:normal; }
+
+@font-face{
+  font-family:Montserrat;
+  src:url(assets/template-discount/fonts/montserrat-italic-webfont.882908d.woff2) format("woff2"), url(assets/template-discount/fonts/montserrat-italic-webfont.22e7b04.woff) format("woff");
+  font-weight:400;
+  font-style:italic; }
+h1,h2,h3,h4,p{
+  margin:0; }
+
+body{
+  font-family:Montserrat,sans-serif; }
+
+#app{
+  max-width:37.5rem;
+  margin:0 auto; }
+
+body{
+  background-color:#f8f8f8; }
+
+.hero{
+  background-color:#f5dbc4;
+  text-align:center;
+  padding:2rem 0;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+      flex-direction:column;
+  -ms-flex-align:center;
+      align-items:center;
+  margin-bottom:2rem; }
+  .hero.incart{
+    display:none; }
+.main-heading{
+  height:17.23301vw; }
+  @media (min-width:600px){
+    .main-heading{
+      height:103.39806px; } }
+  .main-heading.alt .heading-container{
+    background-color:#fff; }
+  .main-heading.alt .logo:before{
+    background-color:#f8f8f8; }
+  .main-heading .heading-container{
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color:#f8f8f8;
+    z-index:999;
+    max-width:600px; }
+  .main-heading .content-container{
+    text-align:center;
+    padding:0 16px;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:justify;
+        justify-content:space-between;
+    -ms-flex-align:center;
+        align-items:center;
+    height:17.23301vw; }
+    @media (min-width:600px){
+      .main-heading .content-container{
+        height:103.39806px; } }
+  .main-heading .logo{
+    margin-right:3.39806vw;
+    width:10.67961vw;
+    position:relative; }
+    @media (min-width:600px){
+      .main-heading .logo{
+        margin-right:20.38835px;
+        width:64.07767px; } }
+    .main-heading .logo:before{
+      content:"";
+      position:absolute;
+      height:100%;
+      width:100%;
+      background-color:#fff;
+      left:-20px;
+      padding:5px 18px;
+      top:50%;
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%);
+      border-top-right-radius:15%;
+      border-bottom-right-radius:15%; }
+  .main-heading .address{
+    font-style:italic;
+    font-size:3.39806vw;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+        align-items:center;
+    white-space:nowrap;
+    padding:15px;
+    color:#4a4a4a; }
+    @media (min-width:600px){
+      .main-heading .address{
+        font-size:20.38835px;
+        padding:21.84466px; } }
+    .main-heading .address>svg{
+      margin-right:3.39806vw; }
+      @media (min-width:600px){
+        .main-heading .address>svg{
+          margin-right:20.38835px; } }
+.card{
+  background-color:#fff;
+  border-radius:8px;
+  margin:0 16px;
+  color:#3b3b3b;
+  overflow:hidden;
+  box-shadow:0 0 14px 0 rgba(0, 0, 0, .2); }
+  .card .content,.card .image-container{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:center;
+        justify-content:center; }
+  .card .image-container{
+    padding:0 4.85437vw;
+    width:22.57282vw;
+    -ms-flex-direction:column;
+        flex-direction:column;
+    -ms-flex:0 0 auto;
+        flex:0 0 auto; }
+    @media (min-width:600px){
+      .card .image-container{
+        padding:0 29.12621px;
+        width:135.43689px; } }
+  .card .card-info{
+    padding:3.39806vw;
+    text-align:left;
+    position:relative; }
+    @media (min-width:600px){
+      .card .card-info{
+        padding:20.38835px; } }
+  .card .logo svg{
+    width:75px; }
+  .card .discount{
+    color:#f9933a;
+    font:700 8.73786vw Montserrat,sans-serif;
+    text-transform:uppercase;
+    margin-bottom:1.21359vw; }
+    @media (min-width:600px){
+      .card .discount{
+        font-size:52.42718px;
+        margin-bottom:7.28155px; } }
+  .card .expiration{
+    font-size:3.39806vw;
+    font-style:italic;
+    margin-bottom:3.39806vw; }
+    @media (min-width:600px){
+      .card .expiration{
+        font-size:20.38835px;
+        margin-bottom:20.38835px; } }
+  .card .item-name{
+    font-size:3.39806vw;
+    font-weight:600;
+    margin-bottom:.97087vw; }
+    @media (min-width:600px){
+      .card .item-name{
+        font-size:20.38835px;
+        margin-bottom:5.82524px; } }
+  .card .details{
+    font-size:3.39806vw; }
+    @media (min-width:600px){
+      .card .details{
+        font-size:20.38835px; } }
+  .card .addtocart{
+    width:100%;
+    height:12.13592vw;
+    background-color:#f9933a;
+    color:#fff;
+    font-weight:700;
+    letter-spacing:2px;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack:center;
+        justify-content:center;
+    -ms-flex-align:center;
+        align-items:center;
+    border:0;
+    text-transform:uppercase;
+    font-size:2.91262vw;
+    font-family:Montserrat,sans-serif; }
+    @media (min-width:600px){
+      .card .addtocart{
+        font-size:17.47573px;
+        height:72.81553px; } }
+
+.card-container .remove-card{
+  position:absolute;
+  right:0;
+  top:0;
+  display:none; }
+.amp-tab-container{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  margin-bottom:42.47573vw; }
+  @media (min-width:600px){
+    .amp-tab-container{
+      margin-bottom:254.85437px; } }
+  .amp-tab-container .tab-button[selected]{
+    outline:none;
+    color:#f9933a;
+    font-weight:700; }
+  .amp-tab-container .tab-button{
+    list-style:none;
+    text-align:center;
+    text-transform:uppercase;
+    cursor:pointer;
+    border-bottom:1px solid #000;
+    padding:6.06796vw 0 6.06796vw 4.85437vw;
+    margin-right:16px;
+    -ms-flex:1 0 0%;
+        flex:1 0 0%;
+    margin-bottom:2rem;
+    font-size:3.8835vw; }
+    @media (min-width:600px){
+      .amp-tab-container .tab-button{
+        font-size:23.30097px;
+        padding:36.40777px 29.12621px; } }
+  .amp-tab-container .tab-button.first{
+    position:relative;
+    border-right:1px solid #000;
+    padding-left:0;
+    padding-right:4.85437vw;
+    margin-left:16px;
+    margin-right:0; }
+    @media (min-width:600px){
+      .amp-tab-container .tab-button.first{
+        padding-right:29.12621px; } }
+    .amp-tab-container .tab-button.first:before{
+      content:"";
+      height:11.65049vw;
+      width:11.65049vw;
+      position:absolute;
+      background-color:#f8f8f8;
+      bottom:0;
+      right:0;
+      border-radius:50%;
+      -ms-transform:translate(50%, 50%);
+          transform:translate(50%, 50%); }
+      @media (min-width:600px){
+        .amp-tab-container .tab-button.first:before{
+          width:69.90291px;
+          height:69.90291px; } }
+    .amp-tab-container .tab-button.first:after{
+      content:"";
+      height:8px;
+      width:8px;
+      position:absolute;
+      background-color:#f9933a;
+      bottom:0;
+      right:0;
+      border-radius:50%;
+      -ms-transform:translate(50%, 50%);
+          transform:translate(50%, 50%); }
+  .amp-tab-container .tab-content{
+    display:none;
+    width:100%;
+    -ms-flex-order:1;
+        order:1; }
+  .amp-tab-container .tab-button[selected]+.tab-content{
+    display:block; }
+  .amp-tab-container .item-custom{
+    border:1px solid #000;
+    height:280px;
+    width:380px;
+    margin:10px;
+    text-align:center;
+    padding-top:140px; }
+  .amp-tab-container .tab-container{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+        flex-direction:column;
+    text-align:center;
+    -ms-flex-align:center;
+        align-items:center; }
+  .amp-tab-container .card-container{
+    margin-bottom:7.28155vw; }
+    @media (min-width:600px){
+      .amp-tab-container .card-container{
+        margin-bottom:43.68932px; } }
+  .amp-tab-container .card-container.incart{
+    display:none; }
+.cart .lightbox{
+  width:100%;
+  height:100%;
+  background-color:#f8f8f8;
+  overflow:auto; }
+
+.cart .title{
+  font-size:7.28155vw;
+  font-weight:900;
+  color:#f9933a;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  text-align:center; }
+  @media (min-width:600px){
+    .cart .title{
+      font-size:43.68932px; } }
+
+.cart .heading{
+  position:relative;
+  margin:0 auto;
+  width:87.37864vw;
+  -ms-flex-direction:column;
+      flex-direction:column;
+  padding:2rem 0; }
+  @media (min-width:600px){
+    .cart .heading{
+      width:524.27184px; } }
+
+.cart .back{
+  position:absolute;
+  width:100%;
+  height:100%; }
+
+.cart .subheading{
+  font-size:3.8835vw;
+  padding:0 4.36893vw 2rem;
+  border-bottom:1px solid #000; }
+  @media (min-width:600px){
+    .cart .subheading{
+      font-size:23.30097px;
+      padding:0 26.21359px 2rem; } }
+
+.cart .border-circle{
+  position:relative; }
+  .cart .border-circle:before{
+    content:"";
+    height:11.65049vw;
+    width:11.65049vw;
+    position:absolute;
+    background-color:#f8f8f8;
+    top:50%;
+    left:50%;
+    border-radius:50%;
+    -ms-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%); }
+    @media (min-width:600px){
+      .cart .border-circle:before{
+        width:69.90291px;
+        height:69.90291px; } }
+  .cart .border-circle:after{
+    content:"";
+    height:8px;
+    width:8px;
+    position:absolute;
+    background-color:#f9933a;
+    top:50%;
+    left:50%;
+    border-radius:50%;
+    -ms-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%); }
+
+.cart .saved-coupons{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+      flex-direction:column;
+  text-align:center;
+  -ms-flex-align:center;
+      align-items:center;
+  padding:0 16px; }
+
+.cart .card-container{
+  display:none; }
+  .cart .card-container.incart{
+    display:block;
+    padding-right:38px; }
+  .cart .card-container .addtocart{
+    display:none; }
+
+.cart .card{
+  margin:0; }
+
+.cart .image-container{
+  padding:2.42718vw 6.06796vw 0;
+  width:19.41748vw; }
+  @media (min-width:600px){
+    .cart .image-container{
+      padding:14.56311px 36.40777px 0;
+      width:116.50485px; } }
+
+.cart .card-info .discount{
+  font-size:7.68932vw;
+  margin-bottom:0; }
+  @media (min-width:600px){
+    .cart .card-info .discount{
+      font-size:46.13592px; } }
+
+.cart .card-info .details,.cart .card-info .expiration,.cart .card-info .item-name{
+  font-size:2.99029vw; }
+  @media (min-width:600px){
+    .cart .card-info .details,.cart .card-info .expiration,.cart .card-info .item-name{
+      font-size:17.94175px; } }
+
+.cart .ampstart-btn{
+  height:4.31rem;
+  width:4.31rem;
+  border-radius:50%;
+  background-color:#f9933a;
+  position:fixed;
+  bottom:0;
+  right:0;
+  color:#fff;
+  font-size:1.6rem;
+  border:0;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:center;
+      justify-content:center;
+  -ms-flex-align:center;
+      align-items:center;
+  letter-spacing:10px;
+  margin:7.28155vw 1.875rem 2.25rem auto;
+  box-shadow:0 0 14px 0 rgba(0, 0, 0, .2); }
+  @media (min-width:600px){
+    .cart .ampstart-btn{
+      margin-top:43.68932px; } }
+  .cart .ampstart-btn:after{
+    content:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjEuMzEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNC44NzUgMjAuMzQ0SDIuMjVBMS4zMTMgMS4zMTMgMCAwIDEgLjkzNyAxOS4wM1YxLjk3YzAtLjcyNS41ODgtMS4zMTMgMS4zMTMtMS4zMTNoMi42MjVhMi42MjUgMi42MjUgMCAxIDAgNS4yNSAwaDIuNjI1Yy43MjUgMCAxLjMxMy41ODggMS4zMTIgMS4zMTNWMTkuMDNjMCAuNzI1LS41ODcgMS4zMTMtMS4zMTIgMS4zMTNoLTIuNjI1YTIuNjI1IDIuNjI1IDAgMSAwLTUuMjUgMHoiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKDkwIDEwLjEyNSA3LjIxOSkiIGN4PSIxMC4xMjUiIGN5PSI3LjIxOSIgcj0iMS4zMTMiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKDkwIDQuODc1IDE0LjQzOCkiIGN4PSI0Ljg3NSIgY3k9IjE0LjQzOCIgcj0iMS4zMTMiLz48cGF0aCBkPSJNMTAuNzgxIDEzLjc4MUw0LjIyIDcuMjIiLz48L2c+PC9zdmc+);
+    margin-top:4px; }
+
+.cart .card-container{
+  margin-bottom:2rem;
+  position:relative; }
+
+.cart .remove-card{
+  display:block; }
+
+  </style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+</head>
+<body>
+  <div id="app">
+    
+<!-- partial: component/layout/app/app.hbs -->
+<div data-component="app-root">
+    
+<!-- partial: component/block/markup/markup.hbs -->
+<script type="application/ld+json">
+ {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "ARImageTarget",
+      "name" : "Food Mart Discounts",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-discount/images/fusilli.jpg"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "name": "Food Mart Discounts",
+      "description": "Get coupons for great discounts at Food Mart",
+      "image": "https://lens-templates.firebaseapp.com/assets/template-discount/images/discount_thumbnail.png",
+      "url": "https://lens-templates.firebaseapp.com/template-discount.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Food Mart",
+        "logo": "https://lens-templates.firebaseapp.com/assets/template-discount/images/discount_logo.png"
+      }
+    }
+  }
+</script>
+<!-- / component/block/markup/markup.hbs -->
+    
+<!-- partial: component/block/state/state.hbs -->
+<amp-state id="items">
+  <script type="application/json">
+    {
+      "counter": 0,
+      "item1": {
+        "cart": "inactive"
+      }
+    }
+  </script>
+</amp-state>
+<!-- / component/block/state/state.hbs -->
+    
+<!-- partial: component/block/hero/hero.hbs -->
+
+<!-- partial: component/general/heading/heading.hbs -->
+<div class="main-heading " data-component="heading">
+  <div class="heading-container">
+    <div class="content-container">
+      <div class="logo">
+        <amp-img src="assets/template-discount/images/icons/logo_small.svg" height="38" width="51" layout="responsive"></amp-img> 
+      </div>
+      <div class="address">
+        <svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Discounts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Discount---Landing-2" transform="translate(-100.000000, -165.000000)" stroke="#111111" stroke-width="1.04999998">
+                <g id="Group-3" transform="translate(101.000000, 165.000000)">
+                    <g id="Group">
+                        <g id="style-two-pin-marker">
+                            <circle id="Oval" cx="6.5" cy="6.90908333" r="3.1875"></circle>
+                            <path d="M12.875,6.90908333 C12.875,12.5049167 7.96483333,15.6435417 6.76279167,16.3299167 C6.59972497,16.4230617 6.39956669,16.4230617 6.2365,16.3299167 C5.03445833,15.6428333 0.125,12.5035 0.125,6.90908333 C0.125000052,3.38826809 2.97918476,0.534083428 6.5,0.534083428 C10.0208152,0.534083428 12.8749999,3.38826809 12.875,6.90908333 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+          </g>
+        </svg>
+        28 Union Square, New York, 10003
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / component/general/heading/heading.hbs -->
+<div class="hero" data-component="hero" [class]="items.item1.cart + ' hero'">
+  
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item1.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_1.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Tumeric and Curcumin</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item1: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item1: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+</div>
+<!-- / component/block/hero/hero.hbs -->
+    
+<!-- partial: component/block/list/list.hbs -->
+<amp-selector role="tablist"
+  layout="container"
+  class="amp-tab-container">
+  <div role="tab" class="tab-button first" selected option="a">Related Deals</div>
+  <div role="tabpanel" class="tab-content">
+    <div class="tab-container">
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item2.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_2.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">35% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Meatball Seasoning</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item2: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item2: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item3.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_3.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">15% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Yin Yang Hot Sauce</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item3: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item3: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item4.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_4.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Kashmir Station Seasoning Blend</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item4: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item4: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+    </div>
+  </div>
+  <div role="tab" class="tab-button" option="b">Featured Deals</div>
+  <div role="tabpanel" class="tab-content">
+    <div class="tab-container">
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item5.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_5.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Advil 200mg</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item5: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item5: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item6.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_6.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">75% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Nivea Body Lotion</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item6: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item6: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+      
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item7.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_7.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Betty Crocker Red Velvet Mix</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item7: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item7: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+    </div>
+  </div>
+</amp-selector>
+<!-- / component/block/list/list.hbs -->
+    
+<!-- partial: component/block/cart/cart.hbs -->
+<div class="cart" data-component="cart">
+  <button class="ampstart-btn caps m2"
+    on="tap:my-lightbox"
+    role="button"
+    tabindex="0"
+    [text]="items.counter"
+    >
+    0
+  </button>
+  <amp-lightbox id="my-lightbox"
+    layout="nodisplay">
+    <div class="lightbox"
+      >
+      <div class="back"
+        on="tap:my-lightbox.close"
+        role="button"
+        tabindex="0">
+      </div>
+      
+<!-- partial: component/general/heading/heading.hbs -->
+<div class="main-heading alt" data-component="heading">
+  <div class="heading-container">
+    <div class="content-container">
+      <div class="logo">
+        <amp-img src="assets/template-discount/images/icons/logo_small.svg" height="38" width="51" layout="responsive"></amp-img> 
+      </div>
+      <div class="address">
+        <svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Discounts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="Discount---Landing-2" transform="translate(-100.000000, -165.000000)" stroke="#111111" stroke-width="1.04999998">
+                <g id="Group-3" transform="translate(101.000000, 165.000000)">
+                    <g id="Group">
+                        <g id="style-two-pin-marker">
+                            <circle id="Oval" cx="6.5" cy="6.90908333" r="3.1875"></circle>
+                            <path d="M12.875,6.90908333 C12.875,12.5049167 7.96483333,15.6435417 6.76279167,16.3299167 C6.59972497,16.4230617 6.39956669,16.4230617 6.2365,16.3299167 C5.03445833,15.6428333 0.125,12.5035 0.125,6.90908333 C0.125000052,3.38826809 2.97918476,0.534083428 6.5,0.534083428 C10.0208152,0.534083428 12.8749999,3.38826809 12.875,6.90908333 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+          </g>
+        </svg>
+        28 Union Square, New York, 10003
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / component/general/heading/heading.hbs -->
+
+      <div class="heading">
+        <div class="title">Your Coupon List</div>
+        <div class="subheading">Please present your list to your cashier</div>
+        <div class="border-circle"></div>
+      </div>
+      <div class="saved-coupons">
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item1.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_1.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Tumeric and Curcumin</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item1: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item1: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item2.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_2.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">35% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Meatball Seasoning</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item2: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item2: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item3.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_3.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">15% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Yin Yang Hot Sauce</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item3: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item3: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item4.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_4.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Kashmir Station Seasoning Blend</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item4: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item4: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item5.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_5.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Advil 200mg</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item5: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item5: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item6.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_6.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">75% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Nivea Body Lotion</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item6: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item6: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+        
+<!-- partial: component/general/card/card.hbs -->
+<div class="card-container"[class]="items.item7.cart + ' card-container'">
+  <div data-component="card" class="card">
+    <div class="content">
+      <div class="image-container">
+        <amp-img 
+          src="assets/template-discount/images/cards/product_7.png" 
+          alt=""
+          layout="responsive"
+          width="93"
+          height="156"
+          class="card-image">
+        </amp-img>
+      </div>
+      <div class="card-info">
+        <div class="discount heading-01">50% OFF</div>
+        <div class="expiration"> Expires 10/10/2018</div>
+        <div class="item-name">Betty Crocker Red Velvet Mix</div>
+        <div class="details">Details deal lorem ipsum dolor sit amet, sed do.</div>
+
+      </div>
+    </div>
+    <div class="barcode">
+      <amp-img 
+        alt="barcode"
+        layout="responsive"
+        src="assets/template-discount/images/icons/barcode.svg" 
+        height="58"
+        width="330">
+      </amp-img>
+    </div>
+    <button class="addtocart" on="tap:AMP.setState({items: {
+      counter: items.counter + 1,
+      item7: {cart: 'incart'}
+      }})">Save to Coupon List
+    </button>
+  </div>
+  <div class="remove-card"
+    on="tap:AMP.setState({items: {
+      counter: items.counter - 1,
+      item7: {cart: 'inactive'}
+      }})"
+  >
+    <amp-img
+      src="assets/template-discount/images/icons/close.svg"
+      height="21"
+      width="21">
+    </amp-img>
+  </div>
+</div>
+<!-- / component/general/card/card.hbs -->
+     </div>
+    </div>
+  </amp-lightbox>
+</div>
+<!-- / component/block/cart/cart.hbs -->
+</div>
+<!-- / component/layout/app/app.hbs -->
+
+  </div>
+</body>
+</html>
